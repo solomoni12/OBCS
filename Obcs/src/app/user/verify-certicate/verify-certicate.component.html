@@ -1,0 +1,67 @@
+<p>
+    <mat-toolbar class="fixed-toolbar" [ngClass]="{'scrolled': isScrolled}" color="{{ isScrolled ? 'black' : 'primary' }}">
+  
+      <span>OBCS</span>
+      <span class="example-spacer"></span>
+      <a mat-button [routerLink]="['/sidebar']" class="blue-link">
+        <span>Home</span>
+      </a>
+      <a mat-button [routerLink]="['/login']" class="blue-link">
+        <span>User</span>
+      </a>
+      <a mat-button [routerLink]="['/verify']" class="blue-link">
+        <span>Verify Certificate</span>
+      </a>    
+    </mat-toolbar>
+  </p>
+  
+  
+  <!-- Login -->
+  <div class="content">
+    <mat-card>
+      <mat-card-header>
+        <h1>SignIn to OBCS</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="form-header">
+          <img [src]="imageUrl" alt="Logo" class="logo">
+        </div>
+        <form class="example-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+          <mat-form-field class="example-full-width">
+            <mat-label>
+              <mat-icon>person</mat-icon>
+              Email
+            </mat-label>
+            <input matInput type="email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>
+              <mat-icon>lock</mat-icon>
+              Password
+            </mat-label>
+            <input type="password" matInput formControlName="password">
+          </mat-form-field>
+          <div class="example-button-row">
+            <button mat-raised-button color="primary">LogIn</button>
+            <button routerLink="/forgot-password" mat-raised-button color="warn">Forgot Password?</button>
+          </div>
+          <div class="example-button-row new-user-button">
+            <button routerLink="/register" mat-raised-button color="accent">New User?</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+  
+    <!-- <mat-toolbar [ngClass]="{'scrolled': isScrolled}" color="{{ isScrolled ? 'black' : 'primary' }}"> -->
+  <p>
+    <mat-toolbar color="primary">
+      <span  class="centered-text">Online Birth Certificate System-OBCS @ 2023</span>  
+      <a mat-button [routerLink]="['/login']" class="blue-link">
+        <span>Contact Us</span>
+      </a>
+    </mat-toolbar>
+  </p>
+  

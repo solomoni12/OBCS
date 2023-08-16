@@ -1,0 +1,259 @@
+/* Default styles for larger screens (e.g., PCs) */
+mat-sidenav {
+    /* background: #0f172a; */
+    /* 0f2a28 */
+    background: #180f2a;
+    width: 200px;
+    height: 100%;
+  }
+  
+  mat-sidenav-content {
+    height: 100vh;
+  }
+  
+  mat-sidenav-content.main {
+    margin-left: 30px;
+  }
+  
+  mat-toolbar {
+    justify-content: space-between;
+  }
+  
+  mat-toolbar .mat-icon {
+    margin-left: 5px;
+    color: gray;
+  }
+  
+  mat-toolbar.box {
+    margin-top: 15px;
+  }
+  
+  a,
+  a:visited,
+  a:hover {
+    color: blue;
+    text-decoration: none;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .custom-label {
+    font-size: 15px; /* Adjust the font size as desired */
+  }
+  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  /* Styles for mobile phones */
+  @media screen and (max-width: 601px) {
+    mat-sidenav {
+      background: #0f172a;
+      width: 145px;
+      height: 100%;
+    }
+    
+    mat-sidenav-content {
+      height: 100vh;
+    }
+    
+    mat-sidenav-content.main {
+      margin-left: 30px;
+    }
+    
+    mat-toolbar {
+      justify-content: space-between;
+    }
+    
+    mat-toolbar .mat-icon {
+      margin-left: 5px;
+      color: gray;
+    }
+    
+    mat-toolbar.box {
+      margin-top: 15px;
+    }
+    
+    a,
+    a:visited,
+    a:hover {
+      color: blue;
+      text-decoration: none;
+      display: flex;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    
+    .custom-label {
+      font-size: 15px; /* Adjust the font size as desired */
+    }
+    
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 0px;
+      text-align: center;
+    }
+  }
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+mat-icon{
+    color: white;
+    font-family: 'Material Icons';
+    vertical-align: middle;
+}
+.top{
+    margin: 15px;
+    padding: 8px;
+    margin-left: 160px;
+    font-size: 45px;
+}
+.user{
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+img{
+    margin-top: -30px;
+    margin-left: -50px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.name{
+    color: white;
+}
+.email{
+    margin-top: -16px;
+    color: #8997ac;
+}
+.menu-head{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 40px;
+    margin-top: -30px;
+}
+.menu-item{
+    margin: 0 10px 0 10px;
+}
+.menu-button span{
+    margin-left: 15px;
+    color: white;
+}
+.menu-button:hover{
+    background-color: #2c3344;
+}
+.menu-button:focus{
+    background-color: #2c3344;
+}
+.menu-item.menu-button{
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.menu-button{
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+@media screen and (max-width: 601px) {
+    *{
+        font-family: sans-serif;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    mat-icon{
+        color: #8997ac;
+        font-family: 'Material Icons';
+        vertical-align: middle;
+    }
+    .top{
+        margin: 15px;
+        padding: 8px;
+        margin-left: 160px;
+        font-size: 45px;
+    }
+    .user{
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 50px;
+    }
+    img{
+        margin-top: -30px;
+        margin-left: -50px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .name{
+        color: white;
+    }
+    .email{
+        margin-top: -16px;
+        color: #8997ac;
+    }
+    .menu-head{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-left: 40px;
+        margin-top: -30px;
+    }
+    .menu-item{
+        margin: 0 10px 0 10px;
+    }
+    .menu-button span{
+        margin-left: 15px;
+        color: white;
+    }
+    .menu-button:hover{
+        background-color: #2c3344;
+    }
+    .menu-button:focus{
+        background-color: #2c3344;
+    }
+    .menu-item.menu-button{
+        display: block;
+        width: 100%;
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        display: flex;
+    }
+    .menu-button{
+        display: block;
+        width: 100%;
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+}

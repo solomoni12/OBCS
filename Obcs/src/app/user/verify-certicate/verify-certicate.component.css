@@ -1,0 +1,170 @@
+/* Default styles for larger screens (e.g., PCs) */
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    margin-top: 10px;
+    color: warn;
+  }
+  
+  .example-button-row button {
+    margin-right: 10px; /* Add right margin between buttons for all screens (PC and mobile) */
+  }
+  
+  /* Add space between the buttons for mobile users only */
+  @media screen and (max-width: 600px) {
+    .example-button-row button:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+  
+  mat-card {
+    margin: 300px auto 180px;
+    margin-top: 100px;
+    margin-bottom: 290px;
+  }
+  
+  .content {
+    display: flex;
+    background-color: #f2f2f2;
+    /* margin-bottom: 90%; */
+  }
+  
+  .logo {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    margin-left: 88px;
+  }
+  
+  /* Media query for smaller screens (e.g., mobile phones) */
+  @media screen and (max-width: 600px) {
+    mat-card {
+      margin: 100px auto; 
+      width: 80%; 
+    }
+  
+    .logo {
+      width: 50px; 
+    }
+  
+    h1 {
+      margin-left: 0; 
+      text-align: center; 
+      font-size: 24px; 
+    }
+  
+    mat-form-field {
+      width: 100%; 
+    }
+  
+    .example-button-row {
+      display: block; 
+      margin-top: 10px; 
+    }
+  
+    /* Additional styles for better layout on mobile */
+    .content {
+      flex-direction: column; 
+      align-items: center; 
+      background-color: #f2f2f2;
+      padding: 10px; 
+    }
+  
+    /* Specific styles for mobile phones */
+    .example-button-row {
+      margin-bottom: 10px; 
+    }
+  
+    .new-user-button {
+      margin-top: 10px; 
+    }
+  }
+  
+  /* Styles for PC and larger screens */
+  @media screen and (min-width: 601px) {
+    .example-button-row button:not(:last-child) {
+      margin-right: 10px; 
+    }
+  }
+
+
+
+
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .blue-link, .menu-link {
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    /* transition: background-color 0.2s, color 0.2s; */
+  }
+  .mat-toolbar.scrolled {
+    background-color: black;
+    color: white;
+    /* Add other styles as needed */
+  }
+
+
+  .middle-image {
+    display: flex;
+    justify-content: center;
+    margin-top: -9px;
+  }
+  
+  .middle-image img {
+    max-height: 1000px; 
+  }
+
+
+
+/* Style for the top and bottom toolbars */
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px; 
+  }
+  
+  /* Style for the scrolled toolbar */
+  .mat-toolbar.scrolled {
+    background-color: black;
+    color: white;
+  }
+  
+  
+
+  .fixed-toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1; 
+  }
+  
+
+  /* Style for the centered text */
+.centered-text {
+    text-align: center;
+    width: 100%; /* Ensures the text takes the full width of the toolbar */
+  }

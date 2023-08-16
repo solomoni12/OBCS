@@ -1,0 +1,34 @@
+<p>
+    <mat-toolbar class="fixed-toolbar" [ngClass]="{'scrolled': isScrolled}" color="{{ isScrolled ? 'black' : 'primary' }}">
+  
+      <span>OBCS</span>
+      <span class="example-spacer"></span>
+      <a mat-button [routerLink]="['/sidebar']" class="blue-link">
+        <span>Home</span>
+      </a>
+      <a mat-button [routerLink]="['/login']" class="blue-link">
+        <span>User</span>
+      </a>
+      <a mat-button [routerLink]="['/verify']" class="blue-link">
+        <span>Verify Certificate</span>
+      </a>    
+    </mat-toolbar>
+  </p>
+
+
+
+  <div class="middle-image">
+    <img [src] = "imageUrl" alt="Middle Image">
+  </div>
+
+
+ 
+    <!-- <mat-toolbar [ngClass]="{'scrolled': isScrolled}" color="{{ isScrolled ? 'black' : 'primary' }}"> -->
+ <p>
+    <mat-toolbar color="primary">
+      <span  class="centered-text">Online Birth Certificate System-OBCS @ 2023</span>  
+      <a mat-button [routerLink]="['/login']" class="blue-link">
+        <span>Contact Us</span>
+      </a>
+    </mat-toolbar>
+  </p>

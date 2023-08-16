@@ -1,0 +1,60 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .blue-link, .menu-link {
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    /* transition: background-color 0.2s, color 0.2s; */
+  }
+  .mat-toolbar.scrolled {
+    background-color: black;
+    color: white;
+    /* Add other styles as needed */
+  }
+
+
+
+
+
+
+/* Style for the top and bottom toolbars */
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px; 
+  }
+  
+  /* Style for the scrolled toolbar */
+  .mat-toolbar.scrolled {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Style for the middle image */
+  .middle-image {
+    display: flex;
+    justify-content: center;
+    margin-top: -9px;
+  }
+  
+  .middle-image img {
+    max-height: 1000px; 
+  }
+
+  .fixed-toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1; 
+  }
+  
+
+  /* Style for the centered text */
+.centered-text {
+    text-align: center;
+    width: 100%; /* Ensures the text takes the full width of the toolbar */
+  }

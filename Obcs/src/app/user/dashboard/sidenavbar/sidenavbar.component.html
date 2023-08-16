@@ -1,0 +1,98 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav #sidebar mode="side" opened="">
+        <!-- <app-sidebar></app-sidebar> -->
+        <!-- side bar -->
+        <div class="navbar">
+            <div class="top">
+                <!-- <mat-icon>notifications_none</mat-icon> -->
+            </div>
+            <div class="user">
+                <!-- <img [src] = "imageUrl" alt="Dynamic image" class="rounded-image"> -->
+            </div>
+            <div class="menu">
+                <div class="menu-head">
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item">
+                    <button mat-button class="menu-button" [routerLink]="['/']">
+                        <mat-icon>home</mat-icon>
+                        <span>Home</span>
+                    </button>
+
+                    <button mat-button class="menu-button" *ngIf="isuser" [matMenuTriggerFor]="addDetailMenu">
+                        <mat-icon>mail</mat-icon>
+                        <span>Birth Reg Form</span>
+                        <mat-icon>keyboard_arrow_right</mat-icon> 
+                    </button>
+                    <mat-menu #addDetailMenu="matMenu">
+                        <button mat-menu-item [routerLink]="['/add_detail']">Add Detail</button>
+                        <button mat-menu-item [routerLink]="['/manage_detail']">Manage Detail</button>
+                    </mat-menu>
+
+
+                    <button mat-button class="menu-button" *ngIf="isuser" [routerLink]="['/certificate']">
+                        <mat-icon>account_circle</mat-icon>
+                        <span>Certificate</span>
+                    </button>
+
+                    <!-- admin -->
+
+                    <button mat-button mat-button class="menu-button" *ngIf="isadminuser" [matMenuTriggerFor]="addDetailMenu2">
+                        <mat-icon>grid_on</mat-icon>
+                        <span>Birth Certificate App</span>
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                    <mat-menu #addDetailMenu2="matMenu">
+                        <button mat-menu-item [routerLink]="['/sidenavbar']">New Application</button>
+                        <button mat-menu-item [routerLink]="['/sidenavbar']">Verified Application</button>
+                        <button mat-menu-item [routerLink]="['/sidenavbar']">Rejected Application</button>
+                        <button mat-menu-item [routerLink]="['/sidenavbar']">All Application</button>
+                    </mat-menu>
+
+                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/sidenavbar']">
+                        <mat-icon>calendar_view_day</mat-icon>
+                        <span>B/W Dates Report</span>
+                    </button>
+                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/sidenavbar']">
+                        <mat-icon>search</mat-icon>
+                        <span>Search</span>
+                    </button>
+                    <button mat-button class="menu-button"  *ngIf="isadminuser" [routerLink]="['/sidenavbar']">
+                        <mat-icon>account_circle</mat-icon>
+                        <span>Registered User</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- end sidebar -->
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+                    <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+                    <div class="spacer"></div>
+                    <mat-form-field class="custom-label" appearance="legacy">
+                        <mat-label >{{ useremail }}</mat-label>
+                        <mat-select disableRipple>
+                            <mat-option (click)="sidebar.toggle()" routerLink="/profile">Profile</mat-option>
+                            <mat-option (click)="sidebar.toggle()" routerLink="/change-change">Change
+                                password</mat-option>
+                                <mat-option routerLink="/login">Logout</mat-option>
+                            <!-- <mat-option (click)="logout()">Logout</mat-option> -->
+                        </mat-select>
+                    </mat-form-field>
+                </mat-toolbar>
+            </div>
+            <div class="main">
+                <!-- Logged as -->
+                <h3 style="text-align: center;">Welcom to Online Birth Certificate System-OBCS, {{ userfirstname }} {{ userlastname }}</h3>
+                <router-outlet></router-outlet>
+            </div>
+            <footer class="footer">
+                <h3>Online Birth Certificate System-OBCS @ 2023</h3>
+            </footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
