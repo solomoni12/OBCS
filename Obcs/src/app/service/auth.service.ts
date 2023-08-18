@@ -41,7 +41,7 @@ export class AuthService {
     return sessionStorage.getItem('sex') != null?sessionStorage.getItem('sex'):'';
   }
   GetUserPhone(){
-    return sessionStorage.getItem('phone_number') != null?sessionStorage.getItem('phone_number'):'';
+    return sessionStorage.getItem('mbno') != null?sessionStorage.getItem('mbno'):'';
   }
   GetUsrAddress(){
     return sessionStorage.getItem('physical_address') != null?sessionStorage.getItem('physical_address'):'';

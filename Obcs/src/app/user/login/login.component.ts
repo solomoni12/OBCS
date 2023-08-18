@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
             sessionStorage.setItem('lastname', this.userdata.lname);
             sessionStorage.setItem('email', this.userdata.email);
             sessionStorage.setItem('sex', this.userdata.sex);
-            sessionStorage.setItem('phone_number', this.userdata.phone_number);
+            sessionStorage.setItem('mbno', this.userdata.mbno);
             sessionStorage.setItem('physical_address', this.userdata.physical_address);
             
             this.router.navigate(['/']);

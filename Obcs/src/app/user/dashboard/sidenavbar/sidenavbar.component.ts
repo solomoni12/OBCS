@@ -26,11 +26,14 @@ export class SidenavbarComponent implements OnInit, DoCheck {
   useremail:any;
   userfirstname:any;
   userlastname:any;
+  mbno:any;
 
   ngOnInit(): void {
     this.useremail = this.service.GetUserEmail();
     this.userfirstname = this.service.GetUserFirstName();
     this.userlastname = this.service.GetUsrLastName();
+    this.mbno = this.service.GetUserPhone();
+    console.log(this.useremail);
   }
   logout(){
     this.service.logout().subscribe({

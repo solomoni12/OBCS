@@ -8,11 +8,11 @@
             </div>
             <div class="user">
                 <!-- <img [src] = "imageUrl" alt="Dynamic image" class="rounded-image"> -->
+                <h3>{{ userfirstname }} {{ userlastname }}</h3>
+                <h3 style="text-align: center;">{{ mbno }}</h3>
             </div>
+            
             <div class="menu">
-                <div class="menu-head">
-                    <span>Dashboard</span>
-                </div>
                 <div class="menu-item">
                     <button mat-button class="menu-button" [routerLink]="['/']">
                         <mat-icon>home</mat-icon>
@@ -87,7 +87,7 @@
             </div>
             <div class="main">
                 <!-- Logged as -->
-                <h3 style="text-align: center;">Welcom to Online Birth Certificate System-OBCS, {{ userfirstname }} {{ userlastname }}</h3>
+                <h3 style="text-align: center;">Welcome to Online Birth Certificate System-OBCS, {{ userfirstname }} {{ userlastname }}</h3>
                 <router-outlet></router-outlet>
             </div>
             <footer class="footer">
