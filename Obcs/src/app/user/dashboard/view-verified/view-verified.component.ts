@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
-import jsPDF from 'jspdf'; // Import jsPDF without the 'build'
+import jsPDF, { TextOptionsLight } from 'jspdf';
 
 @Component({
   selector: 'app-view-verified',
@@ -30,31 +30,55 @@ export class ViewVerifiedComponent implements OnInit {
 
   downloadCertificate() {
     // Use jsPDF to generate and download the PDF
-    const pdfContent = this.generateCertificateContent();
+    const pdf = new jsPDF('landscape');
+    pdf.setFontSize(12);
 
-    const pdf = new jsPDF();
-    pdf.text(pdfContent, 10, 10); // Adjust the positioning as needed
-    pdf.save('certificate.pdf');
+    this.generateCertificateContent(pdf);
+
+    // Save the PDF
+    pdf.save('Birth-Certificate.pdf');
   }
 
-  generateCertificateContent() {
-    const certificateContent = `
-      Certificate Details
+  generateCertificateContent(pdf: jsPDF) {
+    const centerAlignOptions: TextOptionsLight = { align: 'center' };
 
-      Application ID: ${this.refereelist?.applicationId}
-      Full Name: ${this.refereelist?.full_name}
-      Date of Birth: ${this.refereelist?.date_of_birth}
-      Email: ${this.refereelist?.email}
-      Gender: ${this.refereelist?.gender}
-      Mobile Number: ${this.refereelist?.mbno}
-      Name of Father: ${this.refereelist?.name_of_father}
-      Name of Mother: ${this.refereelist?.name_of_mother}
-      Permanent Address: ${this.refereelist?.permanent_address}
-      Place of Birth: ${this.refereelist?.place_of_birth}
-      Postal Address: ${this.refereelist?.postal_address}
-      Status: ${this.refereelist?.status}
-    `;
+    pdf.text('Birth Certificate Details', pdf.internal.pageSize.getWidth() / 2, 10, centerAlignOptions);
 
-    return certificateContent;
+    const rows = [
+      ['Application Number', this.refereelist?.applicationId],
+      ['Full Name', this.refereelist?.full_name],
+      ['Gender', this.refereelist?.gender],
+      ['Date of Birth', this.refereelist?.date_of_birth],
+      ['Place of Birth', this.refereelist?.place_of_birth],
+      ['Name of Mother', this.refereelist?.name_of_mother],
+      ['Name of Father', this.refereelist?.name_of_father],
+      ['Permanent Address of Parents', this.refereelist?.permanent_address],
+      ['Postal Address of Parents', this.refereelist?.postal_address],
+      ['Parents Mobile Number', this.refereelist?.mbno],
+      ['Parents Email', this.refereelist?.email],
+      ['Certificate Number', this.refereelist?.applicationId],
+    ];
+
+    const cellWidth = 100;
+    const cellHeight = 10;
+    let x = 80;
+    let y = 30;
+
+    rows.forEach(row => {
+      const [label, value] = row;
+
+      // Draw border around cell
+      pdf.rect(x, y, cellWidth, cellHeight, 'S');
+
+      pdf.text(label + ':', x + 2, y + 7); // Adjust text position within cell
+      pdf.text(String(value), x + 65, y + 7); // Adjust text position within cell
+
+      y += cellHeight;
+    });
+
+    // Draw border around last cell
+    pdf.rect(x, y, cellWidth, cellHeight, 'S');
+
+    pdf.text('THIS IS A COMPUTER GENERATED CERTIFICATE.', pdf.internal.pageSize.getWidth() / 2, y + 20, centerAlignOptions);
   }
 }
