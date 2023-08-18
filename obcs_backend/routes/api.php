@@ -33,7 +33,9 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     Route::post('/changepassword', [AuthController::class, 'change_password']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::resource('/application',ApplicationController::class);
-  
+    // Route::get('/application/verified', [ApplicationController::class, 'getVerifiedApplications']);
+    Route::get('/applications/verified', [ApplicationController::class, 'getVerifiedApplications']);
+
     
 
 });

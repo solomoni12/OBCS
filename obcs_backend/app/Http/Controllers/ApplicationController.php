@@ -60,8 +60,6 @@ class ApplicationController extends Controller
             'name_of_mother' => $request->name_of_mother,
             'name_of_father' => $request->name_of_father,
             'place_of_birth' => $request->place_of_birth,
-            // 'status' => $request->status,
-            'remark' => $request->remark,
             'permanent_address' => $request->permanent_address,
             'postal_address' => $request->postal_address,
             'mbno' => $request->mbno,
@@ -111,6 +109,18 @@ class ApplicationController extends Controller
 
         return new ApplicationResource($application);
     }
+
+
+    // verified data 
+    public function getVerifiedApplications()
+{
+    $verifiedApplications = Application::where('user_id', Auth::user()->id)
+                                       ->where('status', 'verified')
+                                       ->get();
+    return $this->success([
+        'verified_applications' => $verifiedApplications
+    ]);
+}
 
     /**
      * Remove the specified resource from storage.

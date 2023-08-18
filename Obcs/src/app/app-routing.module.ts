@@ -9,6 +9,8 @@ import { SidenavbarComponent } from './user/dashboard/sidenavbar/sidenavbar.comp
 import { CertificateComponent } from './user/dashboard/certificate/certificate.component';
 import { AddDetailComponent } from './user/dashboard/add-detail/add-detail.component';
 import { ManageDetailComponent } from './user/dashboard/manage-detail/manage-detail.component';
+import { ViewDetailComponent } from './user/dashboard/view-detail/view-detail.component';
+import { ViewVerifiedComponent } from './user/dashboard/view-verified/view-verified.component';
 
 const routes: Routes = [
     { path:'sidebar', component: LoginSidebarComponent },
@@ -22,6 +24,8 @@ const routes: Routes = [
         { path: 'certificate', component: CertificateComponent },
         { path: 'add_detail', component: AddDetailComponent },
         { path: 'manage_detail', component: ManageDetailComponent },
+        { path: 'view_detail', component: ViewDetailComponent },
+        { path: 'view_verified', component: ViewVerifiedComponent },
        ] 
 
       },

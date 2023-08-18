@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Login } from '../model/login/login.module';
 import { Observable } from 'rxjs';
 import { Register } from '../model/register/register.module';
+import { RegisterApplication } from '../model/register-application/register-application.module';
 
 @Injectable({
   providedIn: 'root'
@@ -59,4 +60,19 @@ export class AuthService {
   logout(): Observable<any>{
     return this.http.post(`${this.urlapi}/logout`,{ headers: this.headers })
   }
+
+  // Application API http://127.0.0.1:8000/api/application/
+  registerApplication(user: RegisterApplication): Observable<any> {
+    return this.http.post(`${this.urlapi}/application`, user, { headers: this.headers });
+  }
+  getApplication(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/application`, { headers: this.headers });
+  }
+  getOneApplication(applicationId: any): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/application/${applicationId}`, { headers: this.headers });
+  }
+  getApplicationVerified(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/verified`, { headers: this.headers });
+  }
+
 }

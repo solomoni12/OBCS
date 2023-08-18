@@ -1,0 +1,59 @@
+/* Add appropriate styles for the certificate card */
+.certificate-card {
+    width: 50%;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    padding: 20px;
+  }
+  
+  /* Center the avatar icon */
+  .certificate-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2196F3;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+  }
+  
+  /* Style the title */
+  .mat-card-title {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  
+  /* Style the table */
+  .certificate-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border:0dvw;
+  }
+  
+  /* Style table rows */
+  .certificate-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style table cells */
+  .certificate-table td {
+    padding: 15px;
+  }
+  
+  /* Style strong elements within table cells */
+  .certificate-table td strong {
+    font-weight: bold;
+  }
+  
+  /* Add some spacing for readability */
+  .certificate-table td:nth-child(1) {
+    width: 350px;
+  }
+  mat-card{
+    margin: 100px auto 180px;
+  }
+  
+  /* Add additional styling as needed */

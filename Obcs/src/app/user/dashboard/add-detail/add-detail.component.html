@@ -1,1 +1,57 @@
-<p>add-detail works!</p>
+
+<div class="content">
+    <mat-card>
+      <mat-card-header>Application Form</mat-card-header>
+      <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregistration()">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="full_name">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Full Name of Mother</mat-label>
+            <input matInput formControlName="name_of_mother">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Full Name of Father</mat-label>
+            <input matInput formControlName="name_of_father">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="mbno">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Place of Birth</mat-label>
+            <input matInput formControlName="place_of_birth">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Postal Address</mat-label>
+            <input matInput formControlName="postal_address">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Permanent Address</mat-label>
+            <input matInput formControlName="permanent_address">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Date of Birth</mat-label> 
+            <input type="date" matInput formControlName="date_of_birth"placeholder="ex. 2023-02-02 ">
+          </mat-form-field>
+          <div>
+            <mat-radio-group formControlName="gender" aria-label="Gender">
+              <mat-radio-button value="male">Male</mat-radio-button>|
+              <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div>
+            <button class="example-button-row" mat-raised-button color="primary">Submit</button>
+            <!-- <a routerLink="/login" mat-raised-button color="accent">Back to Login</a> -->
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

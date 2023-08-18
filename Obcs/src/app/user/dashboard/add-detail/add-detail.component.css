@@ -1,0 +1,30 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    margin-top: 10px;
+    margin-right: 10px;
+    
+  }
+
+  mat-card{
+    margin: 100px auto 180px;
+  }
+
+  .content{
+    display: flex;
+    background-color: #f2f2f2;
+  }

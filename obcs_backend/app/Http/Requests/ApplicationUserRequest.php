@@ -28,7 +28,7 @@ class ApplicationUserRequest extends FormRequest
             'name_of_mother' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
             'name_of_father' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
             'place_of_birth' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
-            'remark' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
+            // 'remark' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
             'permanent_address' => ['required', 'string', 'max:255'],
             'postal_address' => ['required', 'string', 'max:255'],
             'mbno' => ['required', 'string', 'digits:10', 'regex:/^0\d{9}$/'],

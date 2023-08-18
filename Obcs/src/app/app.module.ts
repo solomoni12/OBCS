@@ -10,7 +10,7 @@ import { LoginSidebarComponent } from './user/login-sidebar/login-sidebar.compon
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MaterialModule } from 'src/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { VerifyCerticateComponent } from './user/verify-certicate/verify-certicate.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { SidenavbarComponent } from './user/dashboard/sidenavbar/sidenavbar.component';
@@ -19,6 +19,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AddDetailComponent } from './user/dashboard/add-detail/add-detail.component';
 import { ManageDetailComponent } from './user/dashboard/manage-detail/manage-detail.component';
 import { CertificateComponent } from './user/dashboard/certificate/certificate.component';
+import { TokenInterceptor } from './service/token.interceptor';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ViewDetailComponent } from './user/dashboard/view-detail/view-detail.component';
+import { ViewVerifiedComponent } from './user/dashboard/view-verified/view-verified.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import { CertificateComponent } from './user/dashboard/certificate/certificate.c
     SidenavbarComponent,
     AddDetailComponent,
     ManageDetailComponent,
-    CertificateComponent
+    CertificateComponent,
+    ViewDetailComponent,
+    ViewVerifiedComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,17 @@ import { CertificateComponent } from './user/dashboard/certificate/certificate.c
     MatSidenavModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

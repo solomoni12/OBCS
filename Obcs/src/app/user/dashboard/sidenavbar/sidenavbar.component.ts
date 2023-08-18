@@ -1,5 +1,6 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { error } from 'console';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -34,10 +35,11 @@ export class SidenavbarComponent implements OnInit, DoCheck {
   logout(){
     this.service.logout().subscribe({
       next:(res)=>{
-        // localStorage.removeItem('token');
+        localStorage.removeItem('token');
         this.router.navigate(['/login']);
       },
       error:()=>{
+        // console.log(error);
         // alertifyjs.error('Failed to logout. Please try again');
       }
     })

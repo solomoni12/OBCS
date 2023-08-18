@@ -1,0 +1,67 @@
+<mat-card class="certificate-card">
+    <mat-card-header>
+      <div mat-card-avatar class="certificate-avatar">
+        <mat-icon>verified_user</mat-icon>
+      </div>
+      <mat-card-title>Certificate Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="certificate-table">
+        <tr>
+          <td><strong>Application ID:</strong></td>
+          <td>{{  refereelist?.applicationId  }}</td>
+        </tr>
+        <tr>
+          <td><strong>Full Name:</strong></td>
+          <td>{{ refereelist?.full_name }}</td>
+        </tr>
+        <tr>
+          <td><strong>Date of Birth:</strong></td>
+          <td>{{ refereelist?.date_of_birth }}</td>
+        </tr>
+        <tr>
+          <td><strong>Email:</strong></td>
+          <td>{{ refereelist?.email }}</td>
+        </tr>
+        <tr>
+          <td><strong>Gender:</strong></td>
+          <td>{{ refereelist?.gender }}</td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Number:</strong></td>
+          <td>{{ refereelist?.mbno }}</td>
+        </tr>
+        <tr>
+          <td><strong>Name of Father:</strong></td>
+          <td>{{ refereelist?.name_of_father }}</td>
+        </tr>
+        <tr>
+          <td><strong>Name of Mother:</strong></td>
+          <td>{{ refereelist?.name_of_mother }}</td>
+        </tr>
+        <tr>
+          <td><strong>Permanent Address:</strong></td>
+          <td>{{ refereelist?.permanent_address }}</td>
+        </tr>
+        <tr>
+          <td><strong>Place of Birth:</strong></td>
+          <td>{{ refereelist?.place_of_birth }}</td>
+        </tr>
+        <tr>
+          <td><strong>Postal Address:</strong></td>
+          <td>{{ refereelist?.postal_address }}</td>
+        </tr>
+        <tr>
+          <td><strong>Status:</strong></td>
+          <td>{{ refereelist?.status }}</td>
+        </tr>
+      </table>
+     
+    </mat-card-content>
+    <div class="center-button">
+        <button mat-raised-button color="primary" (click)="downloadCertificate()">
+          Download Certificate
+        </button>
+    </div>
+  </mat-card>
+  
