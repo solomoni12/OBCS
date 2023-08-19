@@ -75,4 +75,26 @@ export class AuthService {
     return this.http.get<any>(`${this.urlapi}/applications/verified`, { headers: this.headers });
   }
 
+
+  // admin api http://127.0.0.1:8000/api/applications/rejected_application
+  getNewApplication(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/new_application`);
+  }
+  getAllApplication(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/all_application`);
+  }
+  getRejectedApplication(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/rejected_application`);
+  }
+  getVerifiedApplication(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/verified_application`);
+  }
+
+  // update http://127.0.0.1:8000/api/application/4  http://127.0.0.1:8000/api/applications/update-by-applicationId/79276736
+  // getOneApplication(applicationId: any): Observable<any>{
+  //   return this.http.get<any>(`${this.urlapi}/application/${applicationId}`, { headers: this.headers });
+  // }
+  updatApplication(data:any, id: number){
+    return this.http.put(`${this.urlapi}/applications/update-by-applicationId/${id}`, data, { headers: this.headers });
+  }
 }

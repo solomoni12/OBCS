@@ -110,17 +110,66 @@ class ApplicationController extends Controller
         return new ApplicationResource($application);
     }
 
+    public function updateApplicationByApplicationId(Request $request, $applicationId)
+{
+    $application = Application::where('applicationId', $applicationId)->first();
+
+    // if (!$application) {
+    //     return $this->error('Application not found', 404);
+    // }
+
+    // $this->isNotAuthorized($application);
+
+    $application->update($request->all());
+
+    return new ApplicationResource($application);
+}
+
+
 
     // verified data 
-    public function getVerifiedApplications()
-{
-    $verifiedApplications = Application::where('user_id', Auth::user()->id)
-                                       ->where('status', 'verified')
-                                       ->get();
-    return $this->success([
-        'verified_applications' => $verifiedApplications
-    ]);
+    public function getVerifiedApplications(){
+
+        $verifiedApplications = Application::where('user_id', Auth::user()->id)
+                                        ->where('status', 'verified')
+                                        ->get();
+        return $this->success([
+            'verified_applications' => $verifiedApplications
+        ]);
 }
+// only for admin
+    public function getAllVerifiedApplications(){
+
+        $verifiedApplications = Application::where('status', 'verified')
+                                        ->get();
+        return $this->success([
+            'verified_applications' => $verifiedApplications
+        ]);
+    }
+    public function getAllApplications(){
+
+        $verifiedApplications = Application::get();
+        return $this->success([
+            'verified_applications' => $verifiedApplications
+        ]);
+    }
+
+    public function getRejectedApplications(){
+
+        $verifiedApplications = Application::where('status', 'rejected')
+                                        ->get();
+        return $this->success([
+            'verified_applications' => $verifiedApplications
+        ]);
+    }
+    public function getNewApplications(){
+
+        $verifiedApplications = Application::where('status', 'still pending')
+                                        ->get();
+        return $this->success([
+            'verified_applications' => $verifiedApplications
+        ]);
+    }
 
     /**
      * Remove the specified resource from storage.

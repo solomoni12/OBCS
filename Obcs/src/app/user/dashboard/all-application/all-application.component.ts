@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
-  selector: 'app-manage-detail',
-  templateUrl: './manage-detail.component.html',
-  styleUrls: ['./manage-detail.component.css']
+  selector: 'app-all-application',
+  templateUrl: './all-application.component.html',
+  styleUrls: ['./all-application.component.css']
 })
-export class ManageDetailComponent implements OnInit {
+export class AllApplicationComponent implements OnInit {
 
   constructor(
     private service: AuthService,
@@ -27,8 +27,8 @@ export class ManageDetailComponent implements OnInit {
   @ViewChild(MatSort) sort !:MatSort;
 
   LoadWorker(){
-    this.service.getApplication().subscribe(res=>{
-      this.applicationlist = res.data.user;
+    this.service.getAllApplication().subscribe(res=>{
+      this.applicationlist = res.data.verified_applications;
       console.log(this.applicationlist);
       this.dataSource = new MatTableDataSource(this.applicationlist);
       // console.log(this.dataSource);
@@ -49,7 +49,6 @@ export class ManageDetailComponent implements OnInit {
       this.router.navigate(['/view_detail'], { queryParams: { id: applicationId} });
     });
   }
-
 
 
 }

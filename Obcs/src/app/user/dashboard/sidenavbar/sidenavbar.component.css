@@ -2,7 +2,9 @@
 mat-sidenav {
     /* background: #0f172a; */
     /* 0f2a28 */
-    background: #180f2a;
+    /* background: #180f2a; */
+    /* background: rgb(119, 0, 255); */
+    background-color: #3f51b5;
     width: 200px;
     height: 100%;
   }

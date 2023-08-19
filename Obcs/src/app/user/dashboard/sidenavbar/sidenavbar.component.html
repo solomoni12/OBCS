@@ -43,21 +43,21 @@
                         <mat-icon>keyboard_arrow_right</mat-icon>
                     </button>
                     <mat-menu #addDetailMenu2="matMenu">
-                        <button mat-menu-item [routerLink]="['/sidenavbar']">New Application</button>
-                        <button mat-menu-item [routerLink]="['/sidenavbar']">Verified Application</button>
-                        <button mat-menu-item [routerLink]="['/sidenavbar']">Rejected Application</button>
-                        <button mat-menu-item [routerLink]="['/sidenavbar']">All Application</button>
+                        <button mat-menu-item [routerLink]="['/new_application']">New Application</button>
+                        <button mat-menu-item [routerLink]="['/verified_application']">Verified Application</button>
+                        <button mat-menu-item [routerLink]="['/rejected_application']">Rejected Application</button>
+                        <button mat-menu-item [routerLink]="['/all_application']">All Application</button>
                     </mat-menu>
 
-                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/sidenavbar']">
+                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/date_report']">
                         <mat-icon>calendar_view_day</mat-icon>
                         <span>B/W Dates Report</span>
                     </button>
-                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/sidenavbar']">
+                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/search_application']">
                         <mat-icon>search</mat-icon>
                         <span>Search</span>
                     </button>
-                    <button mat-button class="menu-button"  *ngIf="isadminuser" [routerLink]="['/sidenavbar']">
+                    <button mat-button class="menu-button"  *ngIf="isadminuser" [routerLink]="['/user_registered']">
                         <mat-icon>account_circle</mat-icon>
                         <span>Registered User</span>
                     </button>

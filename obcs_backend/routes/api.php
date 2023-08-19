@@ -35,7 +35,14 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     Route::resource('/application',ApplicationController::class);
     // Route::get('/application/verified', [ApplicationController::class, 'getVerifiedApplications']);
     Route::get('/applications/verified', [ApplicationController::class, 'getVerifiedApplications']);
+    Route::get('/applications/all_verified', [ApplicationController::class, 'getVerifiedApplications']);
 
     
 
 });
+
+Route::get('/applications/verified_application', [ApplicationController::class, 'getAllVerifiedApplications']);
+Route::get('/applications/new_application', [ApplicationController::class, 'getNewApplications']);
+Route::get('/applications/rejected_application', [ApplicationController::class, 'getRejectedApplications']);
+Route::get('/applications/all_application', [ApplicationController::class, 'getAllApplications']);
+Route::put('applications/update-by-applicationId/{applicationId}', [ApplicationController::class, 'updateApplicationByApplicationId']);

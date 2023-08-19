@@ -1,0 +1,21 @@
+<div class="content">
+    <mat-card>
+        <mat-card-header>Take Action</mat-card-header>
+        <mat-card-content>
+            <form class="example-form" [formGroup]="updateForm" (ngSubmit)="Updatefarm()">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Remark</mat-label> 
+                  <input matInput formControlName="remark">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Status</mat-label> 
+                    <input matInput formControlName="status">
+                </mat-form-field>
+                <div >
+                    <button class="example-button-row" mat-raised-button color="primary">update</button>
+                    <a mat-dialog-close mat-raised-button color="accent">Close</a>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

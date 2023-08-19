@@ -23,6 +23,16 @@ import { TokenInterceptor } from './service/token.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ViewDetailComponent } from './user/dashboard/view-detail/view-detail.component';
 import { ViewVerifiedComponent } from './user/dashboard/view-verified/view-verified.component';
+import { NewApplicationComponent } from './user/dashboard/new-application/new-application.component';
+import { AllApplicationComponent } from './user/dashboard/all-application/all-application.component';
+import { VerifiedApplicationComponent } from './user/dashboard/verified-application/verified-application.component';
+import { RejectedApplicationComponent } from './user/dashboard/rejected-application/rejected-application.component';
+import { DateReportComponent } from './user/dashboard/date-report/date-report.component';
+import { UserRegisteredComponent } from './user/dashboard/user-registered/user-registered.component';
+import { SearchComponent } from './user/dashboard/search/search.component';
+import { ViewNewApplicationDetailComponent } from './user/dashboard/view-new-application-detail/view-new-application-detail.component';
+import { UpdateNewApplicationPopupComponent } from './user/dashboard/update-new-application-popup/update-new-application-popup.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -37,7 +47,16 @@ import { ViewVerifiedComponent } from './user/dashboard/view-verified/view-verif
     ManageDetailComponent,
     CertificateComponent,
     ViewDetailComponent,
-    ViewVerifiedComponent
+    ViewVerifiedComponent,
+    NewApplicationComponent,
+    AllApplicationComponent,
+    VerifiedApplicationComponent,
+    RejectedApplicationComponent,
+    DateReportComponent,
+    UserRegisteredComponent,
+    SearchComponent,
+    ViewNewApplicationDetailComponent,
+    UpdateNewApplicationPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +67,8 @@ import { ViewVerifiedComponent } from './user/dashboard/view-verified/view-verif
     ReactiveFormsModule,
     HttpClientModule,
     MatSidenavModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [
     {
