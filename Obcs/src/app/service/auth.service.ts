@@ -4,6 +4,7 @@ import { Login } from '../model/login/login.module';
 import { Observable } from 'rxjs';
 import { Register } from '../model/register/register.module';
 import { RegisterApplication } from '../model/register-application/register-application.module';
+import { getApplicationByApplicationId } from '../model/get-applicatio-by-application-idn/get-applicatio-by-application-idn.module';
 
 @Injectable({
   providedIn: 'root'
@@ -63,10 +64,10 @@ export class AuthService {
 
   // Application API http://127.0.0.1:8000/api/application/
   registerApplication(user: RegisterApplication): Observable<any> {
-    return this.http.post(`${this.urlapi}/application`, user, { headers: this.headers });
+    return this.http.post(`${this.urlapi}/applications`, user, { headers: this.headers });
   }
   getApplication(): Observable<any>{
-    return this.http.get<any>(`${this.urlapi}/application`, { headers: this.headers });
+    return this.http.get<any>(`${this.urlapi}/applications`, { headers: this.headers });
   }
   getOneApplication(applicationId: any): Observable<any>{
     return this.http.get<any>(`${this.urlapi}/application/${applicationId}`, { headers: this.headers });
@@ -90,11 +91,26 @@ export class AuthService {
     return this.http.get<any>(`${this.urlapi}/applications/verified_application`);
   }
 
-  // update http://127.0.0.1:8000/api/application/4  http://127.0.0.1:8000/api/applications/update-by-applicationId/79276736
-  // getOneApplication(applicationId: any): Observable<any>{
-  //   return this.http.get<any>(`${this.urlapi}/application/${applicationId}`, { headers: this.headers });
-  // }
+
   updatApplication(data:any, id: number){
     return this.http.put(`${this.urlapi}/applications/update-by-applicationId/${id}`, data, { headers: this.headers });
+  }
+  getOneApplications(applicationId: any): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/by-applicationId/${applicationId}`, { headers: this.headers });
+  }
+
+  // registered user Api http://127.0.0.1:8000/api/registered_user  http://127.0.0.1:8000/api/users/5
+  getAllRegisteredUser(): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/registered_user`);
+  }
+  deleteRegisteredUser(id:any){
+    return this.http.delete(`${this.urlapi}/users/${id}`);
+  }
+  // http://127.0.0.1:8000/api/users/3/applications http://127.0.0.1:8000/api/applications/41916884
+  getAllRegisteredUserWithApplications(id:any): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/users/${id}/applications`);
+  }
+  getApplicationByApplicationId(id:any): Observable<any>{
+    return this.http.get<any>(`${this.urlapi}/applications/${id}`);
   }
 }

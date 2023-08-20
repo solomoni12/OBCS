@@ -1,13 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
-  selector: 'app-view-detail',
-  templateUrl: './view-detail.component.html',
-  styleUrls: ['./view-detail.component.css']
+  selector: 'app-view-detail-user',
+  templateUrl: './view-detail-user.component.html',
+  styleUrls: ['./view-detail-user.component.css']
 })
-export class ViewDetailComponent implements OnInit {
+export class ViewDetailUserComponent implements OnInit {
+
   detaillist: any; // Variable to store the fetched data
 
   constructor(
@@ -28,6 +29,5 @@ export class ViewDetailComponent implements OnInit {
       console.log(this.detaillist);
     });
   }
-  
-  
+
 }

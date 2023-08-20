@@ -153,4 +153,39 @@ class AuthController extends Controller
         ]);
     }
 
+    public function getAllRegisterdUsers(){
+
+        $registeredUser = User::get();
+        return $this->success([
+            'registeredUser' => $registeredUser
+        ]);
+    }
+
+    public function getAllRegisteredUsersWithApplications($userId) {
+        $user = User::with('application')->find($userId);
+    
+        if (!$user) {
+            return $this->error('', 'User not found', 404);
+        }
+    
+        return $this->success([
+            'user' => $user
+        ]);
+    }
+    
+
+    public function deleteUser($id) {
+        $user = User::find($id);
+
+        if (!$user) {
+            return $this->error('', 'User not found', 404);
+        }
+
+        if ($user->delete()) {
+            return $this->success(['message' => 'User deleted successfully']);
+        } else {
+            return $this->error('', 'Failed to delete user', 500);
+        }
+    }
+
 }

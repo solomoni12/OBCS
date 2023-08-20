@@ -1,4 +1,4 @@
-<mat-card class="certificate-card">
+<!-- <mat-card class="certificate-card">
     <mat-card-header>
       <div mat-card-avatar class="certificate-avatar">
         <mat-icon>verified_user</mat-icon>
@@ -64,4 +64,54 @@
         </button>
     </div>
   </mat-card>
-  
+   -->
+   
+<mat-card class="certificate-card">
+  <mat-card-header>
+    <div mat-card-avatar class="certificate-avatar">
+      <mat-icon>verified_user</mat-icon>
+    </div>
+    <mat-card-title>Certificate Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table class="certificate-table">
+      <tr>
+        <td><strong>Application ID:</strong></td>
+        <td>{{ newapplicationlist?.applicationId }}</td>
+        <td><strong>Full Name:</strong></td>
+        <td>{{ newapplicationlist?.full_name }}</td>
+        <td><strong>Date of Birth:</strong></td>
+        <td>{{ newapplicationlist?.date_of_birth }}</td>
+      </tr>
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td>{{ newapplicationlist?.email }}</td>
+        <td><strong>Gender:</strong></td>
+        <td>{{ newapplicationlist?.gender }}</td>
+        <td><strong>Mobile Number:</strong></td>
+        <td>{{ newapplicationlist?.mbno }}</td>
+      </tr>
+      <tr>
+        <td><strong>Name of Father:</strong></td>
+        <td>{{ newapplicationlist?.name_of_father }}</td>
+        <td><strong>Name of Mother:</strong></td>
+        <td>{{ newapplicationlist?.name_of_mother }}</td>
+        <td><strong>Permanent Address:</strong></td>
+        <td>{{ newapplicationlist?.permanent_address }}</td>
+      </tr>
+      <tr>
+        <td><strong>Place of Birth:</strong></td>
+        <td>{{ newapplicationlist?.place_of_birth }}</td>
+        <td><strong>Postal Address:</strong></td>
+        <td>{{ newapplicationlist?.postal_address }}</td>
+        <td><strong>Status:</strong></td>
+        <td>{{ newapplicationlist?.status }}</td>
+      </tr>
+    </table>
+  </mat-card-content>
+  <div class="center-button">
+    <button mat-raised-button color="primary" (click)="downloadCertificate()">
+      Download Certificate
+    </button>
+</div>
+</mat-card>

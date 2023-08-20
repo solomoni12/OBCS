@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/service/auth.service';
 export class UpdateNewApplicationPopupComponent implements OnInit {
 
   updateForm!: FormGroup;
-  
+  statuslist = ['verified','rejected'];
   constructor(
     private formBuilder: FormBuilder,
     private service: AuthService,

@@ -33,6 +33,9 @@ import { SearchComponent } from './user/dashboard/search/search.component';
 import { ViewNewApplicationDetailComponent } from './user/dashboard/view-new-application-detail/view-new-application-detail.component';
 import { UpdateNewApplicationPopupComponent } from './user/dashboard/update-new-application-popup/update-new-application-popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ViewUserWithApplicationComponent } from './user/dashboard/view-user-with-application/view-user-with-application.component';
+import { ViewDetailUserComponent } from './user/dashboard/view-detail-user/view-detail-user.component';
+import { ViewDetailSearchComponent } from './user/dashboard/view-detail-search/view-detail-search.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     UserRegisteredComponent,
     SearchComponent,
     ViewNewApplicationDetailComponent,
-    UpdateNewApplicationPopupComponent
+    UpdateNewApplicationPopupComponent,
+    ViewUserWithApplicationComponent,
+    ViewDetailUserComponent,
+    ViewDetailSearchComponent
   ],
   imports: [
     BrowserModule,

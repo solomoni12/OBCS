@@ -4,8 +4,13 @@
     margin-left: 200px;
     margin-bottom: 100px;
     padding: 20px;
-  } */
-  
+  }
+   */
+
+   .certificate-card{
+    margin: 20px;
+    padding: 20px;
+   }
   /* Center the avatar icon */
   .certificate-avatar {
     display: flex;
@@ -56,9 +61,4 @@
     margin: 100px auto 180px;
   }
   
-
-  .center-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px; 
-  }
+  /* Add additional styling as needed */

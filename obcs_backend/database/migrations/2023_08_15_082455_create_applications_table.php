@@ -28,8 +28,7 @@ return new class extends Migration
             $table->integer('mbno');
             $table->string('email')->unique();
             $table->string('status')->default('still pending');
-            // $table->string('status');
-            $table->string('remark');
+            $table->string('remark')->nullable();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')

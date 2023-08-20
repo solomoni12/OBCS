@@ -76,10 +76,14 @@ class ApplicationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // public function show(Application $application)
+    // {
+    //     return $this->isNotAuthorized($application) ? $this->isNotAuthorized($application) : new ApplicationResource($application);
+    // }
     public function show(Application $application)
-    {
-        return $this->isNotAuthorized($application) ? $this->isNotAuthorized($application) : new ApplicationResource($application);
-    }
+{
+    return new ApplicationResource($application);
+}
 
     /**
      * Show the form for editing the specified resource.
@@ -110,19 +114,14 @@ class ApplicationController extends Controller
         return new ApplicationResource($application);
     }
 
-    public function updateApplicationByApplicationId(Request $request, $applicationId)
-{
-    $application = Application::where('applicationId', $applicationId)->first();
+        public function updateApplicationByApplicationId(Request $request, $applicationId){
+        $application = Application::where('applicationId', $applicationId)->first();
 
-    // if (!$application) {
-    //     return $this->error('Application not found', 404);
-    // }
+        
 
-    // $this->isNotAuthorized($application);
+        $application->update($request->all());
 
-    $application->update($request->all());
-
-    return new ApplicationResource($application);
+        return new ApplicationResource($application);
 }
 
 
@@ -171,6 +170,15 @@ class ApplicationController extends Controller
         ]);
     }
 
+    // public function getAllApplicationsByApplicationId($applicationId){
+            
+    //     $applications = Application::where('applicationId', $applicationId)->get();
+
+    //     return new ApplicationResource($applications);
+    // }
+
+    // admin end
+
     /**
      * Remove the specified resource from storage.
      *
@@ -201,4 +209,13 @@ class ApplicationController extends Controller
             return $this->error('','You are not Authorized to make request',403);
         }
     }
+
+    public function getApplicationsByApplicationId($applicationId) {
+        $applications = Application::where('applicationId', $applicationId)->get();
+    
+        return $this->success([
+            'applications' => $applications
+        ]);
+    }
+
 }

@@ -1,1 +1,26 @@
-<p>search works!</p>
+
+  
+  <!-- Login -->
+  <div class="content">
+    <mat-card>
+      <mat-card-header>
+        <h1>Search Application By ApplicationID</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+          <mat-form-field class="example-full-width">
+            <mat-label>
+              <mat-icon>person</mat-icon>
+              ApplicationID
+            </mat-label>
+            <input matInput formControlName="applicationId">
+          </mat-form-field>
+          <div class="example-button-row">
+            <button mat-raised-button color="primary">Search</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  

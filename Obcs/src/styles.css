@@ -32,8 +32,8 @@ table {
   }
 
   .demo-button-container {
-    padding-bottom: 16px;
-    margin-left: 20px;
+    padding-bottom: 16px !important;
+    margin-left: 20px !important;
   }
   
   .demo-button + .demo-button {
@@ -46,6 +46,10 @@ table {
     margin-top: 10px !important;
     margin-right: 10px !important;
     
+  }
+  .certificate-card{
+    margin: 20px !important;
+    padding: 20px !important;
   }
 
   .material-icons {

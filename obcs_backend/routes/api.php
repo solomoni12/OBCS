@@ -32,7 +32,8 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     Route::get('/logged', [AuthController::class, 'logged_user']);
     Route::post('/changepassword', [AuthController::class, 'change_password']);
     Route::post('/logout', [AuthController::class, 'logout']);
-    Route::resource('/application',ApplicationController::class);
+    Route::get('/applications',[ApplicationController::class,'index']);
+    Route::post('/applications',[ApplicationController::class,'store']);
     // Route::get('/application/verified', [ApplicationController::class, 'getVerifiedApplications']);
     Route::get('/applications/verified', [ApplicationController::class, 'getVerifiedApplications']);
     Route::get('/applications/all_verified', [ApplicationController::class, 'getVerifiedApplications']);
@@ -46,3 +47,9 @@ Route::get('/applications/new_application', [ApplicationController::class, 'getN
 Route::get('/applications/rejected_application', [ApplicationController::class, 'getRejectedApplications']);
 Route::get('/applications/all_application', [ApplicationController::class, 'getAllApplications']);
 Route::put('applications/update-by-applicationId/{applicationId}', [ApplicationController::class, 'updateApplicationByApplicationId']);
+Route::get('applications/by-applicationId/{applicationId}', [ApplicationController::class,'getAllApplicationsByApplicationId']);
+Route::resource('/application',ApplicationController::class);
+Route::get('/registered_user',[AuthController::class,'getAllRegisterdUsers']);
+Route::delete('/users/{id}', [AuthController::class,'deleteUser']);
+Route::get('/users/{id}/applications', [AuthController::class,'getAllRegisteredUsersWithApplications']);
+Route::get('/applications/{applicationId}', [ApplicationController::class, 'getApplicationsByApplicationId']);

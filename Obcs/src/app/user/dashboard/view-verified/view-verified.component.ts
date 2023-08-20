@@ -10,7 +10,7 @@ import jsPDF, { TextOptionsLight } from 'jspdf';
 })
 export class ViewVerifiedComponent implements OnInit {
 
-  refereelist: any; // Variable to store the fetched data
+  newapplicationlist: any; // Variable to store the fetched data
 
   constructor(
     private service: AuthService,
@@ -24,7 +24,7 @@ export class ViewVerifiedComponent implements OnInit {
   LoadWorker() {
     const applicationId = Number(this.route.snapshot.queryParamMap.get('id'));
     this.service.getOneApplication(applicationId).subscribe(res => {
-      this.refereelist = res.data.attributes;
+      this.newapplicationlist = res.data.attributes;
     });
   }
 
@@ -45,18 +45,18 @@ export class ViewVerifiedComponent implements OnInit {
     pdf.text('Birth Certificate Details', pdf.internal.pageSize.getWidth() / 2, 10, centerAlignOptions);
 
     const rows = [
-      ['Application Number', this.refereelist?.applicationId],
-      ['Full Name', this.refereelist?.full_name],
-      ['Gender', this.refereelist?.gender],
-      ['Date of Birth', this.refereelist?.date_of_birth],
-      ['Place of Birth', this.refereelist?.place_of_birth],
-      ['Name of Mother', this.refereelist?.name_of_mother],
-      ['Name of Father', this.refereelist?.name_of_father],
-      ['Permanent Address of Parents', this.refereelist?.permanent_address],
-      ['Postal Address of Parents', this.refereelist?.postal_address],
-      ['Parents Mobile Number', this.refereelist?.mbno],
-      ['Parents Email', this.refereelist?.email],
-      ['Certificate Number', this.refereelist?.applicationId],
+      ['Application Number', this.newapplicationlist?.applicationId],
+      ['Full Name', this.newapplicationlist?.full_name],
+      ['Gender', this.newapplicationlist?.gender],
+      ['Date of Birth', this.newapplicationlist?.date_of_birth],
+      ['Place of Birth', this.newapplicationlist?.place_of_birth],
+      ['Name of Mother', this.newapplicationlist?.name_of_mother],
+      ['Name of Father', this.newapplicationlist?.name_of_father],
+      ['Permanent Address of Parents', this.newapplicationlist?.permanent_address],
+      ['Postal Address of Parents', this.newapplicationlist?.postal_address],
+      ['Parents Mobile Number', this.newapplicationlist?.mbno],
+      ['Parents Email', this.newapplicationlist?.email],
+      ['Certificate Number', this.newapplicationlist?.applicationId],
     ];
 
     const cellWidth = 100;

@@ -19,6 +19,9 @@ import { SearchComponent } from './user/dashboard/search/search.component';
 import { DateReportComponent } from './user/dashboard/date-report/date-report.component';
 import { UserRegisteredComponent } from './user/dashboard/user-registered/user-registered.component';
 import { ViewNewApplicationDetailComponent } from './user/dashboard/view-new-application-detail/view-new-application-detail.component';
+import { ViewUserWithApplicationComponent } from './user/dashboard/view-user-with-application/view-user-with-application.component';
+import { ViewDetailUserComponent } from './user/dashboard/view-detail-user/view-detail-user.component';
+import { ViewDetailSearchComponent } from './user/dashboard/view-detail-search/view-detail-search.component';
 
 const routes: Routes = [
     { path:'sidebar', component: LoginSidebarComponent },
@@ -42,8 +45,11 @@ const routes: Routes = [
         { path: 'date_report', component: DateReportComponent },
         { path: 'user_registered', component: UserRegisteredComponent },
         { path: 'view_new_application_details', component: ViewNewApplicationDetailComponent },
-
-
+        { path: 'view_registerd_user_application_details', component: ViewUserWithApplicationComponent },
+        { path: 'view_registerd_user_application', component: ViewDetailUserComponent },
+        { path: 'view_user_application_search', component: ViewDetailSearchComponent },
+        // view_user_application_search
+        // view_registerd_user_application
        ] 
 
       },

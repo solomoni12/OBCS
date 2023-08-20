@@ -20,20 +20,20 @@ export class AddDetailComponent implements OnInit {
   registerform = this.formBuilder.group({
     full_name: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z]+')
+      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
     ]),
     name_of_mother: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z]+')
+      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
     ]),
     name_of_father: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z]+')
+      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
     ]),
     place_of_birth: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z]+')
-    ]),
+      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
+    ]),    
     
     mbno: this.formBuilder.control('', [
       Validators.required,

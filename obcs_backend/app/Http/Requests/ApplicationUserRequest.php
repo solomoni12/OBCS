@@ -24,10 +24,10 @@ class ApplicationUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'full_name' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
-            'name_of_mother' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
-            'name_of_father' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
-            'place_of_birth' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
+            'full_name' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z\s]+$/'],
+            'name_of_mother' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z\s]+$/'],
+            'name_of_father' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z\s]+$/'],
+            'place_of_birth' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z\s]+$/'],
             // 'remark' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z]+$/'],
             'permanent_address' => ['required', 'string', 'max:255'],
             'postal_address' => ['required', 'string', 'max:255'],

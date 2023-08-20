@@ -1,0 +1,51 @@
+<mat-card class="certificate-card">
+    <div class="demo-button-container">
+      <a routerLink="/search_application" class="demo-button" mat-fab color="primary">
+        <mat-icon>fast_rewind</mat-icon>
+      </a>
+    </div>
+    <mat-card-header>
+      <mat-card-title>View Application Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="certificate-table">
+        <tr>
+          <td><strong>Application ID:</strong></td>
+          <td>{{ detaillist?.applicationId }}</td>
+          <td><strong>Full Name:</strong></td>
+          <td>{{ detaillist?.full_name }}</td>
+          <td><strong>Date of Birth:</strong></td>
+          <td>{{ detaillist?.date_of_birth }}</td>
+        </tr>
+        <tr>
+          <td><strong>Email:</strong></td>
+          <td>{{ detaillist?.email }}</td>
+          <td><strong>Gender:</strong></td>
+          <td>{{ detaillist?.gender }}</td>
+          <td><strong>Mobile Number:</strong></td>
+          <td>{{ detaillist?.mbno }}</td>
+        </tr>
+        <tr>
+          <td><strong>Name of Father:</strong></td>
+          <td>{{ detaillist?.name_of_father }}</td>
+          <td><strong>Name of Mother:</strong></td>
+          <td>{{ detaillist?.name_of_mother }}</td>
+          <td><strong>Permanent Address:</strong></td>
+          <td>{{ detaillist?.permanent_address }}</td>
+        </tr>
+        <tr>
+          <td><strong>Place of Birth:</strong></td>
+          <td>{{ detaillist?.place_of_birth }}</td>
+          <td><strong>Postal Address:</strong></td>
+          <td>{{ detaillist?.postal_address }}</td>
+          <td><strong>Status:</strong></td>
+          <td>{{ detaillist?.status }}</td>
+        </tr>
+        <tr>
+          <td><strong>Remark:</strong></td>
+          <td colspan="5">{{ detaillist?.remark }}</td>
+        </tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  
