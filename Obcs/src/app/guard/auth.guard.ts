@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
         if (route.url.length > 0) {
           const menu = route.url[0].path;
 
-          if (menu === 'user') {
+          if (menu === 'new_application' || menu==='verified_application' || menu==='rejected_application' || menu==='all_application' || menu === 'search_application' || menu==='user_registered') {
             if (this.service.GetUserrole() === '1') {
               return true;
             } else {
