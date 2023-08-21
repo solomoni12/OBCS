@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\ApplicationResource;
 use App\Http\Requests\ApplicationUserRequest;
 use App\Http\Controllers\ApplicationController;
-
+use Carbon\Carbon;
 class ApplicationController extends Controller
 {
 
@@ -217,5 +217,26 @@ class ApplicationController extends Controller
             'applications' => $applications
         ]);
     }
+
+   
+
+    public function getApplicationsByDateRange(Request $request) {
+        $startDate = $request->input('start_date');
+        $endDate = $request->input('end_date');
+        
+        // Convert dates to Carbon instances for proper comparison
+        $startDate = Carbon::parse($startDate);
+        $endDate = Carbon::parse($endDate);
+    
+        $applications = Application::whereBetween('created_at', [$startDate, $endDate])
+                                   ->get();
+    
+        return $this->success([
+            'applications' => $applications
+        ]);
+    }
+    
+    
+    
 
 }

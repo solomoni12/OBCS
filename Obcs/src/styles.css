@@ -49,8 +49,11 @@ table {
   }
   .certificate-card{
     margin: 20px !important;
-    padding: 20px !important;
+    /* padding: 20px !important; */
   }
+  .certificate-table[_ngcontent-aad-c194] td[_ngcontent-aad-c194]:nth-child(1) {
+    width: 192px !important;
+}
 
   .material-icons {
     font-size: 20px;

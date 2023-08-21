@@ -22,14 +22,14 @@ export class SearchComponent implements OnInit {
   userdata: any;
   token: any;
   errorMessage: string = '';
-  loginform = this.formBuilder.group({
+  findform = this.formBuilder.group({
     applicationId: this.formBuilder.control(''),
   });
 
-  proceedlogin() {
-    console.log(this.loginform.valid)
-    if (this.loginform.valid) {
-      this.service.getApplicationByApplicationId(this.loginform.value.applicationId).subscribe(
+  proceedfind() {
+    console.log(this.findform.valid)
+    if (this.findform.valid) {
+      this.service.getApplicationByApplicationId(this.findform.value.applicationId).subscribe(
         (result) => {
           this.userdata = result.data.applications[0];
           console.log(this.userdata.id);

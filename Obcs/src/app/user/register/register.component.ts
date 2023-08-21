@@ -23,6 +23,14 @@ export class RegisterComponent implements OnInit {
     private router: Router
   ) { }
 
+
+  // fname: String;
+  // lname: String;
+  // address: String;
+  // mbno: String;
+  // email: String;
+  // password: String;
+  // password_confirmation: String;
   registerform = this.formBuilder.group({
     fname: this.formBuilder.control('', [
       Validators.required,
@@ -32,23 +40,17 @@ export class RegisterComponent implements OnInit {
       Validators.required,
       Validators.pattern('[a-zA-Z]+')
     ]),
-    phone_number: this.formBuilder.control('', [
+    mbno: this.formBuilder.control('', [
       Validators.required,
       Validators.pattern('^0[0-9]{9}$')
     ]),
-    physical_address: this.formBuilder.control('', Validators.required),
+    address: this.formBuilder.control('', Validators.required),
     password: this.formBuilder.control('', Validators.required),
     password_confirmation: this.formBuilder.control('', Validators.required),
     email: this.formBuilder.control('', [
       Validators.required,
       Validators.email
     ]),
-    sex: this.formBuilder.control('male', [
-      Validators.required,
-      Validators.pattern('[a-zA-Z]+')
-    ]),
-    role: this.formBuilder.control(0),
-    isactive: this.formBuilder.control(1),
   });
 
   proceedregistration() {

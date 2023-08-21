@@ -49,9 +49,7 @@
   }
   
   /* Add some spacing for readability */
-  .certificate-table td:nth-child(1) {
-    width: 350px;
-  }
+ 
   mat-card{
     margin: 100px auto 180px;
   }

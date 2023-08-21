@@ -1,0 +1,11 @@
+.example-full-width {
+    width: 100%;
+}
+.mat-card{
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+}
+.mat-card-header{
+    text-align: center;
+}

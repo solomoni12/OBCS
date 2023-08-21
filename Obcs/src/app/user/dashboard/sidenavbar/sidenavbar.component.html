@@ -7,7 +7,6 @@
                 <!-- <mat-icon>notifications_none</mat-icon> -->
             </div>
             <div class="user">
-                <!-- <img [src] = "imageUrl" alt="Dynamic image" class="rounded-image"> -->
                 <h3>{{ userfirstname }} {{ userlastname }}</h3>
                 <div class="text">
                     <h4 style="text-align: center;">{{ mbno }}</h4>
@@ -51,10 +50,10 @@
                         <button mat-menu-item [routerLink]="['/all_application']">All Application</button>
                     </mat-menu>
 
-                    <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/date_report']">
+                    <!-- <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/date_report']">
                         <mat-icon>calendar_view_day</mat-icon>
                         <span>B/W Dates Report</span>
-                    </button>
+                    </button> -->
                     <button mat-button class="menu-button" *ngIf="isadminuser" [routerLink]="['/search_application']">
                         <mat-icon>search</mat-icon>
                         <span>Search</span>
@@ -78,10 +77,9 @@
                     <mat-form-field class="custom-label" appearance="legacy">
                         <mat-label >{{ useremail }}</mat-label>
                         <mat-select disableRipple>
-                            <mat-option (click)="sidebar.toggle()" routerLink="/profile">Profile</mat-option>
-                            <mat-option (click)="sidebar.toggle()" routerLink="/change-change">Change
-                                password</mat-option>
-                                <!-- <mat-option routerLink="/login">Logout</mat-option> -->
+                            <mat-option  routerLink="/profile">My Profile</mat-option>
+                            <mat-option  routerLink="/change-password">Settings</mat-option>
+                                <!--(click)="sidebar.toggle()" <mat-option routerLink="/login">Logout</mat-option> -->
                             <mat-option (click)="logout()">Logout</mat-option>
                         </mat-select>
                     </mat-form-field>

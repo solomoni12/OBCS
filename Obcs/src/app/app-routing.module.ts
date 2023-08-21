@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './user/login/login.component';
 import { LoginSidebarComponent } from './user/login-sidebar/login-sidebar.component';
 import { RegisterComponent } from './user/register/register.component';
-import { VerifyCerticateComponent } from './user/verify-certicate/verify-certicate.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { SidenavbarComponent } from './user/dashboard/sidenavbar/sidenavbar.component';
 import { CertificateComponent } from './user/dashboard/certificate/certificate.component';
@@ -22,34 +21,44 @@ import { ViewNewApplicationDetailComponent } from './user/dashboard/view-new-app
 import { ViewUserWithApplicationComponent } from './user/dashboard/view-user-with-application/view-user-with-application.component';
 import { ViewDetailUserComponent } from './user/dashboard/view-detail-user/view-detail-user.component';
 import { ViewDetailSearchComponent } from './user/dashboard/view-detail-search/view-detail-search.component';
+import { AdminHomeComponent } from './user/dashboard/admin-home/admin-home.component';
+import { AuthGuard } from './guard/auth.guard';
+import { UserProfileComponent } from './user/dashboard/user-profile/user-profile.component';
+import { UserSettingComponent } from './user/dashboard/user-setting/user-setting.component';
+import { ForgotPasswordComponent } from './user/dashboard/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './user/dashboard/reset-password/reset-password.component';
 
 const routes: Routes = [
     { path:'sidebar', component: LoginSidebarComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'verify', component: VerifyCerticateComponent },
-    { path: 'dashboard', component: DashboardComponent },
+    { path: 'forgot-password', component: ForgotPasswordComponent },
+    { path: 'reset-password', component: ResetPasswordComponent },
+    
     {
-       path: '', component: SidenavbarComponent,
+       path: '', component: SidenavbarComponent,canActivate: [AuthGuard],
        children:[
-        { path: 'certificate', component: CertificateComponent },
-        { path: 'add_detail', component: AddDetailComponent },
-        { path: 'manage_detail', component: ManageDetailComponent },
-        { path: 'view_detail', component: ViewDetailComponent },
-        { path: 'view_verified', component: ViewVerifiedComponent },
-        { path: 'verified_application', component: VerifiedApplicationComponent },
-        { path: 'all_application', component: AllApplicationComponent },
-        { path: 'rejected_application', component: RejectedApplicationComponent },
-        { path: 'new_application', component: NewApplicationComponent },
-        { path: 'search_application', component: SearchComponent },
-        { path: 'date_report', component: DateReportComponent },
-        { path: 'user_registered', component: UserRegisteredComponent },
-        { path: 'view_new_application_details', component: ViewNewApplicationDetailComponent },
-        { path: 'view_registerd_user_application_details', component: ViewUserWithApplicationComponent },
-        { path: 'view_registerd_user_application', component: ViewDetailUserComponent },
-        { path: 'view_user_application_search', component: ViewDetailSearchComponent },
-        // view_user_application_search
-        // view_registerd_user_application
+        { path: 'certificate', component: CertificateComponent,canActivate: [AuthGuard] },
+        { path: 'add_detail', component: AddDetailComponent, canActivate: [AuthGuard] },
+        { path: 'manage_detail', component: ManageDetailComponent , canActivate: [AuthGuard]},
+        { path: 'view_detail', component: ViewDetailComponent, canActivate: [AuthGuard] },
+        { path: 'view_verified', component: ViewVerifiedComponent, canActivate: [AuthGuard] },
+        { path: 'verified_application', component: VerifiedApplicationComponent , canActivate: [AuthGuard]},
+        { path: 'all_application', component: AllApplicationComponent , canActivate: [AuthGuard]},
+        { path: 'rejected_application', component: RejectedApplicationComponent, canActivate: [AuthGuard] },
+        { path: 'new_application', component: NewApplicationComponent, canActivate: [AuthGuard] },
+        { path: 'search_application', component: SearchComponent, canActivate: [AuthGuard] },
+        { path: 'date_report', component: DateReportComponent , canActivate: [AuthGuard]},
+        { path: 'user_registered', component: UserRegisteredComponent, canActivate: [AuthGuard] },
+        { path: 'view_new_application_details', component: ViewNewApplicationDetailComponent, canActivate: [AuthGuard]},
+        { path: 'view_registerd_user_application_details', component: ViewUserWithApplicationComponent, canActivate: [AuthGuard]},
+        { path: 'view_registerd_user_application', component: ViewDetailUserComponent, canActivate: [AuthGuard] },
+        { path: 'view_user_application_search', component: ViewDetailSearchComponent, canActivate: [AuthGuard] },
+        { path: 'dashboard', component: AdminHomeComponent, canActivate: [AuthGuard] },
+        { path: 'profile', component: UserProfileComponent, canActivate: [AuthGuard] },
+        { path: 'change-password', component: UserSettingComponent, canActivate: [AuthGuard] },
+
+
        ] 
 
       },

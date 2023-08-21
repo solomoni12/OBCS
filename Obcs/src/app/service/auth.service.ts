@@ -5,6 +5,9 @@ import { Observable } from 'rxjs';
 import { Register } from '../model/register/register.module';
 import { RegisterApplication } from '../model/register-application/register-application.module';
 import { getApplicationByApplicationId } from '../model/get-applicatio-by-application-idn/get-applicatio-by-application-idn.module';
+import { ChangePassword } from '../model/change-password/change-password.module';
+import { ForgotPassword } from '../model/forgot-password/forgot-password.module';
+import { ResetPassword } from '../model/reset-password/reset-password.module';
 
 @Injectable({
   providedIn: 'root'
@@ -51,15 +54,30 @@ export class AuthService {
 
 
 
-// UserAPI
+// UserAPI http://127.0.0.1:8000/api/logged
   signin(user: Login): Observable<any> {
     return this.http.post<any>(`${this.urlapi}/login`, user);
   }
   register(user: Register): Observable<any> {
     return this.http.post(`${this.urlapi}/register`, user);
   }
+  loggedUser(): Observable<any> {
+    return this.http.get<any>(`${this.urlapi}/logged`);
+  }
+  UpdateUser(data:any, id: number){
+    return this.http.put(`${this.urlapi}/user/${id}`, data, { headers: this.headers });
+  }
   logout(): Observable<any>{
     return this.http.post(`${this.urlapi}/logout`,{ headers: this.headers })
+  }
+  changepassword(changepassword: ChangePassword): Observable<any> {
+    return this.http.post<any>(`${this.urlapi}/changepassword`, changepassword, { headers: this.headers });
+  }
+  forgotPassword(forgotPassword: ForgotPassword): Observable<any> {
+    return this.http.post<any>(`${this.urlapi}/password/forgot`, forgotPassword);
+  }
+  resetPassword(resetPassword: ResetPassword): Observable<any> {
+    return this.http.post<any> (`${this.urlapi}/password/reset`, resetPassword);
   }
 
   // Application API http://127.0.0.1:8000/api/application/

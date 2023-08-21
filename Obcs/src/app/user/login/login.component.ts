@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     // You can adjust the value based on your design
     this.isScrolled = window.scrollY > 100; // Change to true when scrolled down by 100px
   }
+  data:any;
   constructor(
     private formBuilder: FormBuilder, // Use FormBuilder instead of UntypedFormBuilder
     private service: AuthService,
@@ -23,6 +24,8 @@ export class LoginComponent implements OnInit {
   ) {
 
   }
+
+  
   userdata: any;
   token: any;
   errorMessage: string = '';
@@ -44,14 +47,14 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('token', this.token);
 
             sessionStorage.setItem('token', this.token);
-            sessionStorage.setItem('userrole', this.userdata.role);
+           this.data = sessionStorage.setItem('userrole', this.userdata.role);
             sessionStorage.setItem('firstname', this.userdata.fname);
             sessionStorage.setItem('lastname', this.userdata.lname);
             sessionStorage.setItem('email', this.userdata.email);
             sessionStorage.setItem('sex', this.userdata.sex);
             sessionStorage.setItem('mbno', this.userdata.mbno);
             sessionStorage.setItem('physical_address', this.userdata.physical_address);
-            
+            console.log(this.data);
             this.router.navigate(['/']);
           } else {
             // alertifyjs.error('You are not active. Please contact admin via mwalupani@gmail.com');

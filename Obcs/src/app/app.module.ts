@@ -11,7 +11,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MaterialModule } from 'src/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { VerifyCerticateComponent } from './user/verify-certicate/verify-certicate.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { SidenavbarComponent } from './user/dashboard/sidenavbar/sidenavbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -36,6 +35,11 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ViewUserWithApplicationComponent } from './user/dashboard/view-user-with-application/view-user-with-application.component';
 import { ViewDetailUserComponent } from './user/dashboard/view-detail-user/view-detail-user.component';
 import { ViewDetailSearchComponent } from './user/dashboard/view-detail-search/view-detail-search.component';
+import { AdminHomeComponent } from './user/dashboard/admin-home/admin-home.component';
+import { UserProfileComponent } from './user/dashboard/user-profile/user-profile.component';
+import { UserSettingComponent } from './user/dashboard/user-setting/user-setting.component';
+import { ForgotPasswordComponent } from './user/dashboard/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './user/dashboard/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,6 @@ import { ViewDetailSearchComponent } from './user/dashboard/view-detail-search/v
     LoginComponent,
     RegisterComponent,
     LoginSidebarComponent,
-    VerifyCerticateComponent,
     DashboardComponent,
     SidenavbarComponent,
     AddDetailComponent,
@@ -62,7 +65,12 @@ import { ViewDetailSearchComponent } from './user/dashboard/view-detail-search/v
     UpdateNewApplicationPopupComponent,
     ViewUserWithApplicationComponent,
     ViewDetailUserComponent,
-    ViewDetailSearchComponent
+    ViewDetailSearchComponent,
+    AdminHomeComponent,
+    UserProfileComponent,
+    UserSettingComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

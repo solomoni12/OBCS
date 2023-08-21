@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     // Route::get('/application/verified', [ApplicationController::class, 'getVerifiedApplications']);
     Route::get('/applications/verified', [ApplicationController::class, 'getVerifiedApplications']);
     Route::get('/applications/all_verified', [ApplicationController::class, 'getVerifiedApplications']);
+    Route::put('/user/{userId}', [AuthController::class, 'updateUser'])->name('user.update');
 
     
 
@@ -53,3 +54,4 @@ Route::get('/registered_user',[AuthController::class,'getAllRegisterdUsers']);
 Route::delete('/users/{id}', [AuthController::class,'deleteUser']);
 Route::get('/users/{id}/applications', [AuthController::class,'getAllRegisteredUsersWithApplications']);
 Route::get('/applications/{applicationId}', [ApplicationController::class, 'getApplicationsByApplicationId']);
+Route::post('applications/application-date-range', [ApplicationController::class,'getApplicationsByDateRange']);

@@ -1,0 +1,34 @@
+<div class="content">
+    <mat-card>
+      <!-- <mat-card-header>Profile</mat-card-header> -->
+      <mat-card-content>
+        <form class="example-form" [formGroup]="updateForm" (ngSubmit)="updateProfile()">
+          <mat-form-field class="example-full-width">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="fname">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lname">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Physical Address</mat-label>
+            <input matInput formControlName="address">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="mbno">
+          </mat-form-field>
+          <div>
+            <button class="example-button-row" mat-raised-button color="primary">Update</button>
+            <a routerLink="/" mat-raised-button color="accent">Cancel</a>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

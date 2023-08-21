@@ -188,4 +188,16 @@ class AuthController extends Controller
         }
     }
 
+
+    public function updateUser(Request $request, $userId){
+
+        $user = User::findOrFail($userId);
+
+        $user->update($request->all());
+
+        return $this->success([
+            'user' => $user,
+            'message' => 'User details updated successfully'
+        ]);
+    }
 }

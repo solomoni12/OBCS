@@ -9,9 +9,6 @@
       <a mat-button [routerLink]="['/login']" class="blue-link">
         <span>User</span>
       </a>
-      <a mat-button [routerLink]="['/verify']" class="blue-link">
-        <span>Verify Certificate</span>
-      </a>    
     </mat-toolbar>
   </p>
 
@@ -36,11 +33,11 @@
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>Phone Number</mat-label>
-            <input matInput formControlName="phone_number">
+            <input matInput formControlName="mbno">
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>Physical Address</mat-label>
-            <input matInput formControlName="physical_address">
+            <input matInput formControlName="address">
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>Password</mat-label>
@@ -50,12 +47,7 @@
             <mat-label>Confirm Password</mat-label>
             <input type="password" matInput formControlName="password_confirmation">
           </mat-form-field>
-          <div>
-            <mat-radio-group formControlName="sex" aria-label="Gender">
-              <mat-radio-button value="male">Male</mat-radio-button>|
-              <mat-radio-button value="female">Female</mat-radio-button>
-            </mat-radio-group>
-          </div>
+         
           <div>
             <button class="example-button-row" mat-raised-button color="primary">Submit</button>
             <a routerLink="/login" mat-raised-button color="accent">Back to Login</a>

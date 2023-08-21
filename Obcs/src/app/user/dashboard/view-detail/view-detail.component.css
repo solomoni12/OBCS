@@ -1,13 +1,5 @@
 /* Add appropriate styles for the certificate card */
-/* .certificate-card {
-    width: 50%;
-    margin-left: 200px;
-    margin-bottom: 100px;
-    padding: 20px;
-  } */
-
-  
-  
+ 
   /* Center the avatar icon */
   .certificate-avatar {
     display: flex;
@@ -51,9 +43,7 @@
   }
   
   /* Add some spacing for readability */
-  .certificate-table td:nth-child(1) {
-    width: 350px;
-  }
+
   mat-card{
     margin: 100px auto 180px;
   }
