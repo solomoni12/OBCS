@@ -32,7 +32,6 @@ export class ViewUserWithApplicationComponent implements OnInit {
       this.applicationlist = res.data.user.application;
       console.log(this.applicationlist);
       this.dataSource = new MatTableDataSource(this.applicationlist);
-      // console.log(this.dataSource);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     })
@@ -46,7 +45,6 @@ export class ViewUserWithApplicationComponent implements OnInit {
   viewApplication(applicationId: number) {
     this.service.getOneApplication(applicationId).subscribe(res => {
       this.applicationlist = res.data.attributes;
-      // console.log(this.applicationlist);
       this.router.navigate(['/view_registerd_user_application'], { queryParams: { id: applicationId} });
     });
   }

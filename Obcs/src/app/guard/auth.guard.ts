@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../service/auth.service';
-// import * as alertifyjs from 'alertifyjs';
+import * as alertifyjs from 'alertifyjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
               return true;
             } else {
               this.router.navigate(['/logout']);
-            //   alertifyjs.error('You do not have access to this page.');
+              alertifyjs.error('You do not have access to this page.');
               return false;
             }
           } else {

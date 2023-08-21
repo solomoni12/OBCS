@@ -15,7 +15,6 @@ export class NewApplicationComponent implements OnInit {
   constructor(
     private service: AuthService,
     private router: Router,
-    // private route: ActivatedRoute
   ){
     this.LoadWorker();
    }
@@ -31,7 +30,6 @@ export class NewApplicationComponent implements OnInit {
       this.applicationlist = res.data.verified_applications;
       console.log(this.applicationlist);
       this.dataSource = new MatTableDataSource(this.applicationlist);
-      // console.log(this.dataSource);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     })
@@ -45,7 +43,6 @@ export class NewApplicationComponent implements OnInit {
   viewApplication(applicationId: number) {
     this.service.getOneApplication(applicationId).subscribe(res => {
       this.applicationlist = res.data.attributes;
-      // console.log(this.applicationlist);
       this.router.navigate(['/view_new_application_details'], { queryParams: { id: applicationId} });
     });
   }

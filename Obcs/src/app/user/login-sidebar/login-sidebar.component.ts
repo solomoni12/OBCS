@@ -11,8 +11,8 @@ export class LoginSidebarComponent implements OnInit {
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    // You can adjust the value based on your design
-    this.isScrolled = window.scrollY > 100; // Change to true when scrolled down by 100px
+    
+    this.isScrolled = window.scrollY > 100; 
   }
   constructor() { }
 

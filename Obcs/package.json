@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "alertifyjs": "^1.13.1",
     "jspdf": "^2.5.1",
     "pdfmake": "^0.2.7",
     "rxjs": "~7.5.0",

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-update-new-application-popup',
@@ -54,11 +55,11 @@ export class UpdateNewApplicationPopupComponent implements OnInit {
             this.router.navigate(['/all_application']);
           },
           error: () => {
-            console.error('Failed to update');
+            alertifyjs.error('Failed to update');
           }
         });
     } else {
-      console.warn('Form is invalid');
+      alertifyjs.error('Form is invalid');
     }
   }
 }

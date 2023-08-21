@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-add-detail',
@@ -20,19 +21,19 @@ export class AddDetailComponent implements OnInit {
   registerform = this.formBuilder.group({
     full_name: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
+      Validators.pattern('[a-zA-Z ]+')  
     ]),
     name_of_mother: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
+      Validators.pattern('[a-zA-Z ]+')  
     ]),
     name_of_father: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
+      Validators.pattern('[a-zA-Z ]+')  
     ]),
     place_of_birth: this.formBuilder.control('', [
       Validators.required,
-      Validators.pattern('[a-zA-Z ]+')  // Added space character in the pattern
+      Validators.pattern('[a-zA-Z ]+')  
     ]),    
     
     mbno: this.formBuilder.control('', [
@@ -61,18 +62,18 @@ export class AddDetailComponent implements OnInit {
         this.service.registerApplication(this.registerform.value).subscribe(
           res => {
 
-            // alertifyjs.success('User registered successfully');
+            alertifyjs.success('Application registered successfully');
             this.registerform.reset();
             this.router.navigate(['/manage_detail']);
           },
           error => {
             console.log(error);
             this.errorMessage = error.error.message;
-            // alertifyjs.error(this.errorMessage);
+            alertifyjs.error(this.errorMessage);
           }
         );
       } else {
-        // alertifyjs.error('Password and Confirm Password do not match');
+        alertifyjs.error('Password and Confirm Password do not match');
       }
     
   }

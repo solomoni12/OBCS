@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,7 @@ export class SearchComponent implements OnInit {
 
 
   constructor(
-    private formBuilder: FormBuilder, // Use FormBuilder instead of UntypedFormBuilder
+    private formBuilder: FormBuilder, 
     private service: AuthService,
     private router: Router,
   ) {
@@ -37,12 +38,11 @@ export class SearchComponent implements OnInit {
           
         },
         (error) => {
-          console.log(error);
-          // alertifyjs.error('Invalid username or password. Please try again!');
+          alertifyjs.error('Invalid ApplicationID. Please try again!');
         }
       );
     } else {
-      // alertifyjs.error('Invalid username or password. Please try again!');
+      alertifyjs.error('Invalid ApplicationID. Please try again!');
     }
   }
 

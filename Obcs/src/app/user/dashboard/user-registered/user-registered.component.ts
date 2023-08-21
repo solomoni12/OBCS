@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-user-registered',
@@ -15,7 +16,6 @@ export class UserRegisteredComponent implements OnInit {
   constructor(
     private service: AuthService,
     private router: Router,
-    // private route: ActivatedRoute
   ){
     this.LoadWorker();
    }
@@ -31,7 +31,6 @@ export class UserRegisteredComponent implements OnInit {
       this.applicationlist = res.data.registeredUser;
       console.log(this.applicationlist);
       this.dataSource = new MatTableDataSource(this.applicationlist);
-      // console.log(this.dataSource);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     })
@@ -54,10 +53,10 @@ export class UserRegisteredComponent implements OnInit {
     const deletepop = this.service.deleteRegisteredUser(id)
           .subscribe({
             next:(res)=>{
-              // alertifyjs.success('farm deleted')
+              alertifyjs.success('user deleted')
             },
             error:()=>{
-              // alertifyjs.error('Failed. Please Try Again');
+              alertifyjs.error('Failed. Please Try Again');
             }
           })
       if(deletepop){

@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
-
+import * as alertifyjs from 'alertifyjs';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -13,8 +13,8 @@ export class RegisterComponent implements OnInit {
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    // You can adjust the value based on your design
-    this.isScrolled = window.scrollY > 100; // Change to true when scrolled down by 100px
+
+    this.isScrolled = window.scrollY > 100; 
   }
   errorMessage:any;
   constructor(
@@ -23,14 +23,6 @@ export class RegisterComponent implements OnInit {
     private router: Router
   ) { }
 
-
-  // fname: String;
-  // lname: String;
-  // address: String;
-  // mbno: String;
-  // email: String;
-  // password: String;
-  // password_confirmation: String;
   registerform = this.formBuilder.group({
     fname: this.formBuilder.control('', [
       Validators.required,
@@ -62,22 +54,21 @@ export class RegisterComponent implements OnInit {
       if (password === confirmPassword) {
         this.service.register(this.registerform.value).subscribe(
           res => {
-
-            // alertifyjs.success('User registered successfully');
+             alertifyjs.success('User registered successfully');
             this.registerform.reset();
             this.router.navigate(['/']);
           },
           error => {
 
             this.errorMessage = error.error.message;
-            // alertifyjs.error(this.errorMessage);
+             alertifyjs.error(this.errorMessage);
           }
         );
       } else {
-        // alertifyjs.error('Password and Confirm Password do not match');
+        alertifyjs.error('Password and Confirm Password do not match');
       }
     } else {
-      // alertifyjs.error('Invalid data');
+      alertifyjs.error('Invalid data');
     }
   }
 

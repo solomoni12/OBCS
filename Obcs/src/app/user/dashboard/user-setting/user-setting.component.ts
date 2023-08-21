@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-user-setting',
@@ -31,19 +32,19 @@ export class UserSettingComponent implements OnInit {
           .subscribe(
             res => {
               console.log(res);
-              // alertifyjs.success('Password changed successfully');
+              alertifyjs.success('Password changed successfully');
               this.registerform.reset();
               this.router.navigate(['/']); // Navigate to home page
             },
             error => {
-              // alertifyjs.error('Failed. Please try again');
+              alertifyjs.error('Failed. Please try again');
             }
           );
       } else {
-        // alertifyjs.error('Password and Confirm Password do not match');
+        alertifyjs.error('Password and Confirm Password do not match');
       }
     } else {
-      // Handle form validation errors if needed
+      alertifyjs.error('invalid form');
     }
   }
 

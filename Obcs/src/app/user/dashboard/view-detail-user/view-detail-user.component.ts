@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class ViewDetailUserComponent implements OnInit {
 
-  detaillist: any; // Variable to store the fetched data
+  detaillist: any; 
 
   constructor(
     private service: AuthService,
@@ -24,7 +24,7 @@ export class ViewDetailUserComponent implements OnInit {
   LoadWorker() {
     const applicationId = Number(this.route.snapshot.queryParamMap.get('id'));
     this.service.getOneApplication(applicationId).subscribe(res => {
-      this.detaillist = res.data.attributes; // Notice the change here
+      this.detaillist = res.data.attributes; 
       console.log(applicationId);
       console.log(this.detaillist);
     });

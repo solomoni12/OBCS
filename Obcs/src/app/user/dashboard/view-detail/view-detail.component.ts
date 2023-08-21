@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./view-detail.component.css']
 })
 export class ViewDetailComponent implements OnInit {
-  detaillist: any; // Variable to store the fetched data
+  detaillist: any; 
 
   constructor(
     private service: AuthService,
@@ -23,7 +23,7 @@ export class ViewDetailComponent implements OnInit {
   LoadWorker() {
     const applicationId = Number(this.route.snapshot.queryParamMap.get('id'));
     this.service.getOneApplication(applicationId).subscribe(res => {
-      this.detaillist = res.data.attributes; // Notice the change here
+      this.detaillist = res.data.attributes; 
       console.log(applicationId);
       console.log(this.detaillist);
     });

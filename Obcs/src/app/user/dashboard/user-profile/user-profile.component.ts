@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-user-profile',
@@ -38,12 +39,11 @@ export class UserProfileComponent implements OnInit {
           this.user = response.data.user;
           this.populateForm();
         } else {
-          // alertifyjs.error('Failed to fetch user profile. Please try again.');
+          alertifyjs.error('Failed to fetch user profile. Please try again.');
         }
       },
       (error) => {
-        console.log(error);
-        // alertifyjs.error('Failed to fetch user profile. Please try again.');
+        alertifyjs.error('Failed to fetch user profile. Please try again.');
       }
     );
   }
@@ -72,15 +72,14 @@ export class UserProfileComponent implements OnInit {
           console.log(response);
           this.updateForm.reset();
           this.router.navigate(['/']); // Navigate to home page
-          // alertifyjs.success('User profile updated successfully!');
+          alertifyjs.success('User profile updated successfully!');
         },
         (error) => {
-          console.log(error);
-          // alertifyjs.error('Failed to update user profile. Please try again.');
+          alertifyjs.error('Failed to update user profile. Please try again.');
         }
       );
     } else {
-      // alertifyjs.error('Invalid form data. Please fill all the required fields.');
+      alertifyjs.error('Invalid form data. Please fill all the required fields.');
     }
   }
 

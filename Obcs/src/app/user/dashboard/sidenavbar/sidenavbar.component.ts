@@ -2,6 +2,7 @@ import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { error } from 'console';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-sidenavbar',
@@ -42,8 +43,7 @@ export class SidenavbarComponent implements OnInit, DoCheck {
         this.router.navigate(['/login']);
       },
       error:()=>{
-        // console.log(error);
-        // alertifyjs.error('Failed to logout. Please try again');
+        alertifyjs.error('Failed to logout. Please try again');
       }
     })
   }

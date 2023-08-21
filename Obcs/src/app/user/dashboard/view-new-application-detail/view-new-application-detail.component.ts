@@ -11,7 +11,7 @@ import { UpdateNewApplicationPopupComponent } from '../update-new-application-po
 })
 export class ViewNewApplicationDetailComponent implements OnInit {
 
-  newapplicationlist: any; // Variable to store the fetched data
+  newapplicationlist: any;
 
   constructor(
     private service: AuthService,

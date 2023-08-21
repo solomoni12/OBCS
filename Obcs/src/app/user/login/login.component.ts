@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +14,12 @@ export class LoginComponent implements OnInit {
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    // You can adjust the value based on your design
-    this.isScrolled = window.scrollY > 100; // Change to true when scrolled down by 100px
+   
+    this.isScrolled = window.scrollY > 100; 
   }
   data:any;
   constructor(
-    private formBuilder: FormBuilder, // Use FormBuilder instead of UntypedFormBuilder
+    private formBuilder: FormBuilder, 
     private service: AuthService,
     private router: Router,
   ) {
@@ -47,7 +48,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('token', this.token);
 
             sessionStorage.setItem('token', this.token);
-           this.data = sessionStorage.setItem('userrole', this.userdata.role);
+            sessionStorage.setItem('userrole', this.userdata.role);
             sessionStorage.setItem('firstname', this.userdata.fname);
             sessionStorage.setItem('lastname', this.userdata.lname);
             sessionStorage.setItem('email', this.userdata.email);
@@ -57,17 +58,17 @@ export class LoginComponent implements OnInit {
             console.log(this.data);
             this.router.navigate(['/']);
           } else {
-            // alertifyjs.error('You are not active. Please contact admin via mwalupani@gmail.com');
+            alertifyjs.error('You are not active. Please contact admin via mwalupani@gmail.com');
             this.loginform.reset();
           }
         },
         (error) => {
           console.log(error);
-          // alertifyjs.error('Invalid username or password. Please try again!');
+          alertifyjs.error('Invalid username or password. Please try again!');
         }
       );
     } else {
-      // alertifyjs.error('Invalid username or password. Please try again!');
+      alertifyjs.error('Invalid username or password. Please try again!');
     }
   }
 

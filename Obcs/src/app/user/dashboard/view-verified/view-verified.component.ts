@@ -10,7 +10,7 @@ import jsPDF, { TextOptionsLight } from 'jspdf';
 })
 export class ViewVerifiedComponent implements OnInit {
 
-  newapplicationlist: any; // Variable to store the fetched data
+  newapplicationlist: any; 
 
   constructor(
     private service: AuthService,
@@ -29,7 +29,7 @@ export class ViewVerifiedComponent implements OnInit {
   }
 
   downloadCertificate() {
-    // Use jsPDF to generate and download the PDF
+    
     const pdf = new jsPDF('landscape');
     pdf.setFontSize(12);
 
@@ -69,9 +69,9 @@ export class ViewVerifiedComponent implements OnInit {
 
       // Draw border around cell
       pdf.rect(x, y, cellWidth, cellHeight, 'S');
-
-      pdf.text(label + ':', x + 2, y + 7); // Adjust text position within cell
-      pdf.text(String(value), x + 65, y + 7); // Adjust text position within cell
+      // Adjust text position within cell
+      pdf.text(label + ':', x + 2, y + 7); 
+      pdf.text(String(value), x + 65, y + 7); 
 
       y += cellHeight;
     });

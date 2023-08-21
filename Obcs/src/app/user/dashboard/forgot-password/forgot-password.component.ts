@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-forgot-password',
@@ -12,8 +13,8 @@ export class ForgotPasswordComponent implements OnInit {
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    // You can adjust the value based on your design
-    this.isScrolled = window.scrollY > 100; // Change to true when scrolled down by 100px
+ 
+    this.isScrolled = window.scrollY > 100; 
   }
   constructor(
     private formBuilder: FormBuilder,
@@ -36,17 +37,17 @@ export class ForgotPasswordComponent implements OnInit {
         (result) => {
           this.token = result.data;
           console.log(this.token.token);
-          // alertifyjs.success(this.token.message);
+          alertifyjs.success(this.token.message);
           this.router.navigate(['/reset-password'], { queryParams: { token: this.token.token } });
         },
         (error) => {
           this.errorMessage = error.error.message;
           console.log(this.errorMessage);
-          // alertifyjs.error(this.errorMessage);
+          alertifyjs.error(this.errorMessage);
         }
       );
     } else {
-      // alertifyjs.error('Failed. Please try again!');
+      alertifyjs.error('Failed. Please try again!');
     }
   }
   
