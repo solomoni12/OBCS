@@ -24,6 +24,7 @@ The main objective of “Online Birth Certificate System” project is to provid
 - Create database and connect in `.env` file
 - Google Chrome or any browser
 
-  In Online Birth Certificate System we use PHP and MySQL Database. This project has two modules i.e. admin and user.
+### Start using application
+In Online Birth Certificate System we use PHP and MySQL Database. This project has two modules i.e. admin and user.
 
 
