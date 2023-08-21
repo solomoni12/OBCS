@@ -92,3 +92,30 @@ Admin View All Application
 
 ![Admin view all application](meta/cert27.PNG?raw=true)
 Admin View All Application
+
+![Admin view vefied detail](meta/cert17.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert18.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert19.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert20.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert21.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert22.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert23.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert24.PNG?raw=true)
+Admin View Application Details
+
+![Admin view vefied detail](meta/cert25.PNG?raw=true)
+Admin View Application Details
