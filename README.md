@@ -44,3 +44,22 @@ In Online Birth Certificate System we use Laravel Framework(Backend), Angular 14
 3. Certificate: In this section, user can take print of verified certificates.
 
 4. Profile: Users can also update his profile, change their passwords and recover their passwords.
+
+## Screenshots
+![Register](meta/cert2.PNG?raw=true)
+
+![Login](meta/cert3.PNG?raw=true)
+
+![Booking](meta/cert4.PNG?raw=true)
+
+![Booking Email](meta/booking-email.png?raw=true)
+
+![Transaction](meta/transaction.png?raw=true)
+
+![Transaction Email](meta/transaction-email.png?raw=true)
+
+![Transaction Success](meta/transaction-success.png?raw=true)
+
+![Reviews](meta/reviews.png?raw=true)
+
+![Write Review](meta/write-review.png?raw=true)
