@@ -19,6 +19,7 @@ The main objective of “Online Birth Certificate System” project is to provid
 ### Application Configurations
 - Laravel  `9` or later installed
 - Angular `14` or later installed
+- Node `14` or later installed
 - XAMPP `8` or later installed
 - MySQL installed
 - Create database and connect in `.env` file
