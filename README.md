@@ -88,4 +88,7 @@ Admin View Verified Application
 Admin View Rejected Application
 
 ![Admin view all application](meta/cert16.PNG?raw=true)
-Admin View All Applicatio
+Admin View All Application
+
+![Admin view all application](meta/cert27.PNG?raw=true)
+Admin View All Application
