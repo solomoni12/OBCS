@@ -25,6 +25,6 @@ The main objective of “Online Birth Certificate System” project is to provid
 - Google Chrome or any browser
 
 ### Start using application
-In Online Birth Certificate System we use PHP and MySQL Database. This project has two modules i.e. admin and user.
+In Online Birth Certificate System we use Laravel Framework(Backend), Angular 14 Framework(Frontend) and MySQL Database. This project has two modules i.e. admin and user.
 
 
