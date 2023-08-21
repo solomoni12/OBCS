@@ -56,11 +56,15 @@ Register Page
 
 ![User Dahboard](meta/cert26.PNG?raw=true)
 User Dashboard
-![Booking Email](meta/cert5.PNG?raw=true)
 
-![Booking Email](meta/cert5.PNG?raw=true)
+![User Birth Register](meta/cert6.PNG?raw=true)
+Birth Registration
 
-![Booking Email](meta/cert5.PNG?raw=true)
+![User Manage Detail](meta/cert7.PNG?raw=true)
+User Manage Detail
+
+![user certificate](meta/cert8.PNG?raw=true)
+User Certificate
 
 ![Booking Email](meta/cert5.PNG?raw=true)
 
