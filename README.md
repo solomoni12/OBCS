@@ -76,13 +76,16 @@ Admin Dashboard
 Admin View New Application
 
 ![Admin take action new application](meta/cert12.PNG?raw=true)
-Admin Take Action To New Application
+Admin View to Take Action To New Application
 
 ![Admin view verified application](meta/cert13.PNG?raw=true)
+Admin Take Action To New Application
+
+![Admin view verified application](meta/cert14.PNG?raw=true)
 Admin View Verified Application
 
-![Admin view rejected application](meta/cert14.PNG?raw=true)
+![Admin view rejected application](meta/cert15.PNG?raw=true)
 Admin View Rejected Application
 
-![Admin view All application](meta/cert15.PNG?raw=true)
+![Admin view all application](meta/cert16.PNG?raw=true)
 Admin View All Application
