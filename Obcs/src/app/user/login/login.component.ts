@@ -10,7 +10,8 @@ import * as alertifyjs from 'alertifyjs';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  imageUrl = 'assets/obcs.png';
+  // imageUrl = 'assets/obcs.png';
+  imageUrl = 'assets/birth.avif'
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
