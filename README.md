@@ -66,6 +66,7 @@ User Manage Detail
 ![user certificate](meta/cert8.PNG?raw=true)
 User Certificate
 
-![Booking Email](meta/cert5.PNG?raw=true)
+![User download](meta/cert9.PNG?raw=true)
+User Download Certificate
 
 ![Booking Email](meta/cert5.PNG?raw=true)
