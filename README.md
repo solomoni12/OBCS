@@ -69,4 +69,5 @@ User Certificate
 ![User download](meta/cert9.PNG?raw=true)
 User Download Certificate
 
-![Booking Email](meta/cert5.PNG?raw=true)
+![Admin dashboard](meta/cert25.PNG?raw=true)
+Admin Dashboard
