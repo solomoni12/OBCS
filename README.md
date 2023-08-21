@@ -94,7 +94,7 @@ Admin View All Application
 Admin View All Application
 
 ![Admin view vefied detail](meta/cert17.PNG?raw=true)
-Admin View Application Details
+Admin View Verified Application Details
 
 ![Admin view vefied detail](meta/cert18.PNG?raw=true)
 Admin View Application Details
@@ -103,10 +103,10 @@ Admin View Application Details
 Admin View Application Details
 
 ![Admin view vefied detail](meta/cert20.PNG?raw=true)
-Admin View Application Details
+Admin View Rejected Application Details
 
 ![Admin view vefied detail](meta/cert21.PNG?raw=true)
-Admin View Application Details
+Admin Search Application Details
 
 ![Admin view vefied detail](meta/cert22.PNG?raw=true)
 Admin View Application Details
