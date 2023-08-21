@@ -46,12 +46,12 @@ In Online Birth Certificate System we use Laravel Framework(Backend), Angular 14
 4. Profile: Users can also update his profile, change their passwords and recover their passwords.
 
 ## Screenshots
-![home](meta/cert2.PNG?raw=true)
+![home](meta/cert28.PNG?raw=true)
 
-![Login](meta/cert3.PNG?raw=true)
+![Login](meta/cert29.PNG?raw=true)
 Login Page
 
-![register](meta/cert4.PNG?raw=true)
+![register](meta/cert30.PNG?raw=true)
 Register Page
 
 ![User Dahboard](meta/cert26.PNG?raw=true)
