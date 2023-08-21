@@ -6,12 +6,22 @@ Online Birth Certificate System maintains a good record of date of birth of peop
 The main objective of “Online Birth Certificate System” project is to providing easier registration of date of birth and gets certificate of birth online which save lots of time.
 
 ### Application Details
-- Authentication between services communication used `JWT`
+- Authentication between services communication used `Laravel Sanctum`
 
-- Email notification tool `MailHog`
+- Backend `Laravel Framework `
+  
+- Frontend `Angular 14 Framework`
 
-- Databases used `MongoDB` and `H2`
+- Databases used `MySQL`
 
-- Default booking room price `45000`
+- Web Browser `Mozilla, Google Chrome, IE8, OPERA`
+
+### Application Configurations
+- Laravel  `9` or later installed
+- Angular `14` or later installed
+- XAMPP `8` or later installed
+- MySQL installed
+- Create database and connect in `.env` file
+- Google Chrome or any browser
 
 
