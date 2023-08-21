@@ -6,7 +6,7 @@ Online Birth Certificate System maintains a good record of date of birth of peop
 The main objective of “Online Birth Certificate System” project is to providing easier registration of date of birth and gets certificate of birth online which save lots of time.
 
 ### Application Details
-- Authentication between services communication used `Laravel Sanctum`
+- Authentication used `Laravel Sanctum`
 
 - Backend `Laravel Framework `
   
@@ -23,5 +23,7 @@ The main objective of “Online Birth Certificate System” project is to provid
 - MySQL installed
 - Create database and connect in `.env` file
 - Google Chrome or any browser
+
+  In Online Birth Certificate System we use PHP and MySQL Database. This project has two modules i.e. admin and user.
 
 
