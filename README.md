@@ -96,26 +96,26 @@ Admin View All Application
 ![Admin view vefied detail](meta/cert17.PNG?raw=true)
 Admin View Verified Application Details
 
-![Admin view vefied detail](meta/cert18.PNG?raw=true)
-Admin View Application Details
-
-![Admin view vefied detail](meta/cert19.PNG?raw=true)
-Admin View Application Details
-
-![Admin view vefied detail](meta/cert20.PNG?raw=true)
+![Admin view rejected detail](meta/cert18.PNG?raw=true)
 Admin View Rejected Application Details
 
-![Admin view vefied detail](meta/cert21.PNG?raw=true)
+![Admin search detail](meta/cert19.PNG?raw=true)
 Admin Search Application Details
 
-![Admin view vefied detail](meta/cert22.PNG?raw=true)
-Admin View Application Details
+![Admin view searched detail](meta/cert20.PNG?raw=true)
+Admin View Searched Application Details
 
-![Admin view vefied detail](meta/cert23.PNG?raw=true)
-Admin View Application Details
+![Admin view user detail](meta/cert21.PNG?raw=true)
+Admin View Registered User Details
 
-![Admin view vefied detail](meta/cert24.PNG?raw=true)
-Admin View Application Details
+![Admin view user application detail](meta/cert22.PNG?raw=true)
+Admin View Registered User With Associated Application Details
+
+![Admin view profile detail](meta/cert23.PNG?raw=true)
+Admin View Profile Details
+
+![Admin view password detail](meta/cert24.PNG?raw=true)
+Admin View Change Password Details
 
 ![Admin view vefied detail](meta/cert25.PNG?raw=true)
 Admin View Application Details
