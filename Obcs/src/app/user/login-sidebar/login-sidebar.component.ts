@@ -8,7 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class LoginSidebarComponent implements OnInit {
 
   // imageUrl = 'assets/obcs.png';
-  imageUrl = 'assets/birth.avif'
+  imageUrl = 'assets/cert.webp'
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
