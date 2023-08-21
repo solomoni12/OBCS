@@ -117,5 +117,3 @@ Admin View Profile Details
 ![Admin view password detail](meta/cert24.PNG?raw=true)
 Admin View Change Password Details
 
-![Admin view vefied detail](meta/cert25.PNG?raw=true)
-Admin View Application Details
