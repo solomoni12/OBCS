@@ -71,3 +71,18 @@ User Download Certificate
 
 ![Admin dashboard](meta/cert25.PNG?raw=true)
 Admin Dashboard
+
+![Admin view new application](meta/cert11.PNG?raw=true)
+Admin View New Application
+
+![Admin take action new application](meta/cert12.PNG?raw=true)
+Admin Take Action To New Application
+
+![Admin view verified application](meta/cert13.PNG?raw=true)
+Admin View Verified Application
+
+![Admin view rejected application](meta/cert14.PNG?raw=true)
+Admin View Rejected Application
+
+![Admin view All application](meta/cert15.PNG?raw=true)
+Admin View All Application
